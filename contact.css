@@ -1,0 +1,75 @@
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+@keyframes pulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+@keyframes slideIn {
+from { transform: translateY(20px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f9fafb;
+background-image: radial-gradient(circle at 50% 50%, #e6efff 0%, #f9fafb 70%);
+}
+.map-container {
+background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+transition: transform 0.3s ease;
+}
+.map-container:hover {
+transform: scale(1.02);
+}
+.copy-tooltip {
+visibility: hidden;
+opacity: 0;
+transition: all 0.3s ease;
+}
+.copy-container:hover .copy-tooltip {
+visibility: visible;
+opacity: 1;
+}
+.contact-card {
+box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 8px 10px -6px rgba(37, 99, 235, 0.05);
+transition: all 0.3s ease;
+animation: slideIn 0.6s ease-out;
+}
+.contact-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.2), 0 10px 20px -8px rgba(37, 99, 235, 0.1);
+}
+.floating-icon {
+animation: float 3s ease-in-out infinite;
+}
+.pulse-icon {
+animation: pulse 2s ease-in-out infinite;
+}
+.social-icon {
+transition: all 0.3s ease;
+}
+.social-icon:hover {
+transform: translateY(-3px);
+color: var(--tw-color-primary);
+}
+.gradient-text {
+background: linear-gradient(135deg, #2563eb, #60a5fa);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.hover-card {
+transition: all 0.3s ease;
+background: linear-gradient(135deg, white, #f8faff);
+}
+.hover-card:hover {
+background: linear-gradient(135deg, #f8faff, white);
+transform: translateY(-5px);
+}

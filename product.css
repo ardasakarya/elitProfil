@@ -1,0 +1,154 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
+background: linear-gradient(to bottom, #e0f2fe, #bfdbfe);
+
+}
+
+
+/* Ürün İçeriği */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%; /* Yatayda %100 genişlik */
+}
+.product-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 6rem;
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.product-text {
+    flex: 1;
+    min-width: 250px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.product-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.product-text p {
+    font-size: 1.1rem;
+    color: #374151;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+}
+
+.product-image-wrapper {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.product-image-wrapper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.1);
+    
+}
+
+
+/* Tablo Tasarımı */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 5rem;
+}
+
+table {
+    width: 100%;
+    min-width: 600px; /* Gerekirse minimum genişlik ver */
+    border-collapse: separate;
+    border-spacing: 16px;
+}
+
+th, td {
+    background-color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+thead th {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+}
+
+tbody td {
+    background-color: white;
+    color: #1f2937;
+}
+
+tbody tr:hover td {
+    background-color: #eef2ff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+
+
+
+    .product-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-text {
+        text-align: center;
+        margin: 0;
+    }
+
+    .product-image-wrapper {
+        margin-top: 1rem;
+        width: 80%;
+        max-width: 100%;
+    }
+}

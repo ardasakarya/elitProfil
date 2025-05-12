@@ -1,0 +1,18 @@
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=modern%20professional%20product%20showcase%20with%20clean%20minimalist%20background%2C%20soft%20gradient%20lighting%2C%20product%20displayed%20on%20right%20side%20with%20empty%20space%20on%20left%20for%20text%2C%20high-end%20premium%20feel%2C%20soft%20shadows%2C%20studio%20lighting%2C%20product%20photography%2C%20commercial%20quality&width=1920&height=800&seq=123456&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content {
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%);
+        }
+        .video-section {
+            background-color: #f9fafb;
+        }
+        .catalogue-section {
+            background-color: #f0f9ff;
+        }
