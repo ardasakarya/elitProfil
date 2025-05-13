@@ -1,11 +1,13 @@
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
-background: linear-gradient(to bottom, #e0f2fe, #bfdbfe);
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
+            background-color: #bcd4e6;
 
-}
+
+
+        }
 
 
 /* Ürün İçeriği */

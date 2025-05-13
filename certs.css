@@ -1,4 +1,15 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
+            background-color: #bcd4e6;
+
+
+
+        }
+
 @keyframes fadeIn {
 from { opacity: 0; }
 to { opacity: 1; }

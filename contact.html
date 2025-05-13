@@ -1,363 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İletişim</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#60a5fa'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="contact.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#2563eb', secondary: '#60a5fa' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
 </head>
+
 <body>
 
-<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-   <a href="/elitProfil" class="inline-block">
-  <img src="logo.png" alt="Logo" class="h-12 w-auto">
-</a>
-
-            <nav class="hidden md:flex items-center space-x-8">
-             <a href="/elitProfil/#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-      <a href="/elitProfil/#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
-      <a href="/elitProfil/#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-      <a href="/elitProfil/#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
-      <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-            </nav>
-
-    <div class="flex items-center space-x-4">
-      <a href="https://tahsilat.saltcam.com/"
-        class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
-        <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-        E-Ödeme
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/elitProfil" class="inline-block">
+        <img src="logo.png" alt="Logo" class="h-12 w-auto">
       </a>
 
-      <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
-        <i class="ri-menu-line ri-lg"></i>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile Menu -->
-<div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
-  <nav class="flex flex-col space-y-6 py-8">
+      <nav class="hidden md:flex items-center space-x-8">
         <a href="/elitProfil/#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-      <a href="/elitProfil/#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
+        <a href="/elitProfil/#featured-products"
+          class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
+        <a href="/elitProfil/#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden
+          Biz?</a>
+        <a href="/elitProfil/#catalogue"
+          class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
+        <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="https://tahsilat.saltcam.com/"
+          class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+          E-Ödeme
+        </a>
+
+        <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
+          <i class="ri-menu-line ri-lg"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
+    <nav class="flex flex-col space-y-6 py-8">
+      <a href="/elitProfil/#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
+      <a href="/elitProfil/#featured-products"
+        class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
       <a href="/elitProfil/#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-      <a href="/elitProfil/#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
+      <a href="/elitProfil/#catalogue"
+        class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
       <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-  </nav>
-  <button class="bg-primary text-white py-3 !rounded-button font-medium mt-6 whitespace-nowrap">Get Quote</button>
-</div>
+    </nav>
 
-<!-- Hero Section / Ürün Desteği -->
-<section class="relative pt-40 pb-16 px-4 bg-gray-400 text-white">
-  <!-- Background image -->
-  <div class="absolute inset-0">
-    <img src="deneme2.jpg" alt="Destek Görseli" class="w-full h-full object-cover opacity-50">
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- dark overlay -->
+    <a href="https://tahsilat.saltcam.com/"
+      class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+      <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+      E-Ödeme
+    </a>
   </div>
 
-  <!-- Content -->
-  <div class="relative container mx-auto text-center mb-12">
-    <h1 class="text-4xl font-bold mb-4 transform transition-transform hover:scale-105">
-      Ürün Desteği
-    </h1>
-    <p class="text-lg max-w-2xl mx-auto leading-relaxed">
-      Premium yazılım çözümümüz için 7/24 teknik destek ve satış hizmetleri. Size yardımcı olmak için buradayız!
-    </p>
-  </div>
-</section>
 
-    
-<div class="min-h-screen flex flex-col">
-<main class="flex-grow flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
-<div class="w-full max-w-5xl">
-
-
-<!-- Header -->
-
-
-
-<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-
-<div class="lg:col-span-2">
-  <div class="bg-white p-8 rounded contact-card h-full">
-    <div class="mb-8">
-      <h2 class="font-['Pacifico'] text-2xl text-gray-900 mb-2">logo</h2>
-      <div class="w-16 h-1 bg-primary rounded-full"></div>
+  <!-- Hero Section / Ürün Desteği -->
+  <section class="relative pt-40 pb-16 px-4 bg-gray-400 text-white">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="deneme2.jpg" alt="Destek Görseli" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- dark overlay -->
     </div>
-    <div class="space-y-6">
-      <!-- Address -->
-      <div class="flex copy-container group">
-        <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4 floating-icon">
-          <i class="ri-map-pin-line ri-lg"></i>
-        </div>
-        <div class="flex-1">
-          <h3 class="text-sm font-semibold text-gray-500 mb-1">Adresimiz</h3>
-          <p id="address" class="text-gray-800">
-            Bağdat Caddesi No: 123<br />Kadıköy, İstanbul 34710<br />Türkiye
-          </p>
-          <button onclick="copyToClipboard('address')"
-            class="mt-2 text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
-            <i class="ri-file-copy-line ri-sm mr-1"></i> Adresi kopyala
-          </button>
-        </div>
-      </div>
 
-      <!-- Phone -->
-      <div class="flex copy-container group">
-        <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
-          <i class="ri-phone-line ri-lg"></i>
-        </div>
-        <div class="flex-1">
-          <h3 class="text-sm font-semibold text-gray-500 mb-1">Telefon Numarası</h3>
-          <p id="phone" class="text-gray-800">+90 (216) 555 01 23</p>
-          <div class="flex space-x-4 mt-2">
-            <a href="tel:+902165550123" class="text-xs text-primary flex items-center">
-              <i class="ri-phone-line ri-sm mr-1"></i> Şimdi ara
-            </a>
-            <button onclick="copyToClipboard('phone')"
-              class="text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="ri-file-copy-line ri-sm mr-1"></i> Numarayı kopyala
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Email -->
-      <div class="flex copy-container group">
-        <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
-          <i class="ri-mail-line ri-lg"></i>
-        </div>
-        <div class="flex-1">
-          <h3 class="text-sm font-semibold text-gray-500 mb-1">E-posta Adresi</h3>
-          <p id="email" class="text-gray-800">iletisim@logocompany.com</p>
-          <div class="flex space-x-4 mt-2">
-            <a href="mailto:iletisim@logocompany.com" class="text-xs text-primary flex items-center">
-              <i class="ri-mail-send-line ri-sm mr-1"></i> E-posta gönder
-            </a>
-            <button onclick="copyToClipboard('email')"
-              class="text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="ri-file-copy-line ri-sm mr-1"></i> E-postayı kopyala
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hours -->
-      <div class="flex">
-        <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
-          <i class="ri-time-line ri-lg"></i>
-        </div>
-        <div>
-          <h3 class="text-sm font-semibold text-gray-500 mb-1">Çalışma Saatleri</h3>
-          <p class="text-gray-800">Pazartesi - Cuma: 09:00 - 18:00</p>
-          <p class="text-gray-800">Cumartesi: 10:00 - 16:00</p>
-          <p class="text-gray-800">Pazar: Kapalı</p>
-        </div>
-      </div>
-
-      <!-- Documentation -->
-   
+    <!-- Content -->
+    <div class="relative container mx-auto text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 transform transition-transform hover:scale-105">
+        Ürün Desteği
+      </h1>
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed">
+        Premium yazılım çözümümüz için 7/24 teknik destek ve satış hizmetleri. Size yardımcı olmak için buradayız!
+      </p>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- Contact Form -->
-<div class="lg:col-span-3">
-<div class="bg-white p-8 rounded contact-card h-full">
-<h2 class="text-xl font-semibold text-gray-900 mb-6">İletişime Geçin</h2>
-<form id="contactForm" action="" method="POST" class="space-y-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="form-group">
-<label class="block text-sm font-medium text-gray-700 mb-2" for="firstName">Ad</label>
-<div class="relative">
-<i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-<input type="text" id="firstName" name="firstName" required class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300" placeholder="Adınız">
-</div>
-</div>
-<div class="form-group">
-<label class="block text-sm font-medium text-gray-700 mb-2" for="lastName">Soyad</label>
-<div class="relative">
-<i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-<input type="text" id="lastName" name="lastName" required class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300" placeholder="Soyadınız">
-</div>
-</div>
-</div>
-<div class="form-group">
-<label class="block text-sm font-medium text-gray-700 mb-2" for="email">E-posta</label>
-<div class="relative">
-<i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-<input type="email" id="email" name="email" required class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300" placeholder="ornek@sirket.com">
-</div>
-</div>
-<div class="form-group">
-<label class="block text-sm font-medium text-gray-700 mb-2" for="company">Şirket Adı</label>
-<div class="relative">
-<i class="ri-building-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-<input type="text" id="company" name="company" required class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300" placeholder="Şirketinizin adı">
-</div>
-</div>
-<div class="form-group">
-<label class="block text-sm font-medium text-gray-700 mb-2" for="phone">Telefon</label>
-<div class="relative">
-<i class="ri-phone-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-<input type="tel" id="phone" name="phone" required class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300" placeholder="+90 (___) ___ __ __">
-</div>
-</div>
-<button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded hover:bg-primary/90 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-2 !rounded-button">
-<span>Gönder</span>
-<i class="ri-send-plane-line"></i>
-</button>
-</form>
-</div>
-</div>
-</div>
-<!-- Map Section -->
-<div class="mt-12 bg-white p-8 rounded contact-card overflow-hidden">
-  <h2 class="text-xl font-semibold text-gray-900 mb-6">Ofis Konumumuz</h2>
 
-  <!-- Harita Konteyneri -->
-  <div class="relative w-full h-[400px] rounded-lg overflow-hidden map-container">
-    <!-- Google Haritalar iframe -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6387.168015780032!2d34.58156794388339!3d36.82848710413993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f474787bd3a7%3A0x20cb8f4346ca7ef5!2sSalt%20Cam!5e0!3m2!1sen!2str!4v1747060932558!5m2!1sen!2str" 
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade"
-      class="absolute inset-0 w-full h-full">
-    </iframe>
+  <div class="min-h-screen flex flex-col">
+    <main class="flex-grow flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-5xl">
 
-    <!-- Adres Kutusu -->
-    <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg z-10">
-      <h3 class="text-sm font-semibold text-gray-900 mb-2">Salt Cam</h3>
-      <p class="text-sm text-gray-600">Bağdat Caddesi, Kadıköy</p>
-      <p class="text-sm text-gray-600">İstanbul, Türkiye</p>
-      <a href="https://maps.google.com/?q=Salt+Cam" target="_blank" class="inline-flex items-center text-sm text-primary mt-2 hover:text-primary/80 whitespace-nowrap">
-        <span>Google Haritalar'da Aç</span>
-        <i class="ri-external-link-line ri-sm ml-1"></i>
-      </a>
-    </div>
-  </div>
-</div>
 
-</div>
-</main>
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <!-- Company Info -->
-                <div>
-                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 block">logo</a>
-                    <p class="text-gray-400 mb-6">Providing innovative industrial solutions since 2005. We're committed
-                        to excellence in quality and customer service.</p>
-                    <div class="flex space-x-4">
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-twitter-x-fill"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-linkedin-fill"></i>
-                        </a>
-                        <a href="#"
-                            class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
-                            <i class="ri-youtube-fill"></i>
-                        </a>
+        <!-- Header -->
+
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+          <div class="lg:col-span-2">
+            <div class="bg-white p-8 rounded contact-card h-full">
+              <div class="mb-8">
+                <h2 class="font-['Pacifico'] text-2xl text-gray-900 mb-2">logo</h2>
+                <div class="w-16 h-1 bg-primary rounded-full"></div>
+              </div>
+              <div class="space-y-6">
+                <!-- Address -->
+                <div class="flex copy-container group">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4 floating-icon">
+                    <i class="ri-map-pin-line ri-lg"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-sm font-semibold text-gray-500 mb-1">Adresimiz</h3>
+                    <p id="address" class="text-gray-800">
+                      Hüseyin Okan Merzeci Mh.<br />Akbelen Bulvarı No:177/A<br />33090, Toroslar, Mersin, Türkiye
+                    </p>
+                    <button onclick="copyToClipboard('address')"
+                      class="mt-2 text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      <i class="ri-file-copy-line ri-sm mr-1"></i> Adresi kopyala
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex copy-container group">
+                  <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
+                    <i class="ri-phone-line ri-lg"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-sm font-semibold text-gray-500 mb-1">Telefon Numarası</h3>
+                    <p id="phone" class="text-gray-800">+90 0324 324 3939</p>
+                    <div class="flex space-x-4 mt-2">
+                      <a href="tel:+902165550123" class="text-xs text-primary flex items-center">
+                        <i class="ri-phone-line ri-sm mr-1"></i> Şimdi ara
+                      </a>
+                      <button onclick="copyToClipboard('phone')"
+                        class="text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ri-file-copy-line ri-sm mr-1"></i> Numarayı kopyala
+                      </button>
                     </div>
+                  </div>
                 </div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Catalogue</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                    </ul>
+                <!-- Email -->
+                <div class="flex copy-container group">
+                  <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
+                    <i class="ri-mail-line ri-lg"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-sm font-semibold text-gray-500 mb-1">E-posta Adresi</h3>
+                    <p id="email" class="text-gray-800">saltcam@saltcam.com</p>
+                    <div class="flex space-x-4 mt-2">
+                      <a href="mailto:iletisim@logocompany.com" class="text-xs text-primary flex items-center">
+                        <i class="ri-mail-send-line ri-sm mr-1"></i> E-posta gönder
+                      </a>
+                      <button onclick="copyToClipboard('email')"
+                        class="text-xs text-primary flex items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i class="ri-file-copy-line ri-sm mr-1"></i> E-postayı kopyala
+                      </button>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                                <i class="ri-map-pin-line"></i>
-                            </div>
-                            <span class="text-gray-400">123 Innovation Drive, Tech Park, CA 94103, USA</span>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-5 h-5 flex items-center justify-center mr-3">
-                                <i class="ri-phone-line"></i>
-                            </div>
-                            <span class="text-gray-400">+1 (555) 123-4567</span>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-5 h-5 flex items-center justify-center mr-3">
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <span class="text-gray-400">info@yourcompany.com</span>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-5 h-5 flex items-center justify-center mr-3">
-                                <i class="ri-time-line"></i>
-                            </div>
-                            <span class="text-gray-400">Mon-Fri: 9AM-6PM</span>
-                        </li>
-                    </ul>
+                <!-- Hours -->
+                <div class="flex">
+                  <div class="w-10 h-10 flex items-center justify-center text-primary bg-primary/5 rounded-full mr-4">
+                    <i class="ri-time-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-500 mb-1">Çalışma Saatleri</h3>
+                    <p class="text-gray-800">Pazartesi - Cuma: 08.00 - 18.00</p>
+                    <p class="text-gray-800">Cumartesi: 08.00 - 13.00</p>
+                    <p class="text-gray-800">Pazar: Kapalı</p>
+                  </div>
                 </div>
 
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Subscribe to Our Newsletter</h3>
-                    <p class="text-gray-400 mb-4">Stay updated with our latest products and industry news.</p>
-                    <form class="flex flex-col space-y-3">
-                        <div class="relative">
-                            <input type="email" placeholder="Your email address"
-                                class="w-full bg-gray-800 border-none text-white px-4 py-3 rounded focus:ring-2 focus:ring-primary focus:outline-none">
-                        </div>
-                        <button type="submit"
-                            class="bg-primary text-white px-4 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe
-                            Now</button>
-                    </form>
-                </div>
+                <!-- Documentation -->
+
+              </div>
             </div>
+          </div>
 
-            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 mb-4 md:mb-0">© 2025 Your Company. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Sitemap</a>
+          <!-- Contact Form -->
+          <div class="lg:col-span-3">
+            <div class="bg-white p-8 rounded contact-card h-full">
+              <h2 class="text-xl font-semibold text-gray-900 mb-6">İletişime Geçin</h2>
+              <form id="contactForm" action="" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700 mb-2" for="firstName">Ad</label>
+                    <div class="relative">
+                      <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                      <input type="text" id="firstName" name="firstName" required
+                        class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300"
+                        placeholder="Adınız">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="block text-sm font-medium text-gray-700 mb-2" for="lastName">Soyad</label>
+                    <div class="relative">
+                      <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                      <input type="text" id="lastName" name="lastName" required
+                        class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300"
+                        placeholder="Soyadınız">
+                    </div>
+                  </div>
                 </div>
+                <div class="form-group">
+                  <label class="block text-sm font-medium text-gray-700 mb-2" for="email">E-posta</label>
+                  <div class="relative">
+                    <i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="email" id="email" name="email" required
+                      class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300"
+                      placeholder="ornek@sirket.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="block text-sm font-medium text-gray-700 mb-2" for="company">Şirket Adı</label>
+                  <div class="relative">
+                    <i class="ri-building-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="company" name="company" required
+                      class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300"
+                      placeholder="Şirketinizin adı">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="block text-sm font-medium text-gray-700 mb-2" for="phone">Telefon</label>
+                  <div class="relative">
+                    <i class="ri-phone-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="tel" id="phone" name="phone" required
+                      class="w-full pl-10 pr-4 py-2 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300"
+                      placeholder="+90 (___) ___ __ __">
+                  </div>
+                </div>
+                <button type="submit"
+                  class="w-full bg-primary text-white py-3 px-6 rounded hover:bg-primary/90 transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-2 !rounded-button">
+                  <span>Gönder</span>
+                  <i class="ri-send-plane-line"></i>
+                </button>
+              </form>
             </div>
+          </div>
         </div>
+        <!-- Map Section -->
+        <div class="mt-12 bg-white p-8 rounded contact-card overflow-hidden">
+          <h2 class="text-xl font-semibold text-gray-900 mb-6">Ofis Konumumuz</h2>
+
+          <!-- Harita Konteyneri -->
+          <div class="relative w-full h-[400px] rounded-lg overflow-hidden map-container">
+            <!-- Google Haritalar iframe -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6387.168015780032!2d34.58156794388339!3d36.82848710413993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f474787bd3a7%3A0x20cb8f4346ca7ef5!2sSalt%20Cam!5e0!3m2!1sen!2str!4v1747060932558!5m2!1sen!2str"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 w-full h-full">
+            </iframe>
+
+            <!-- Adres Kutusu -->
+            <div class="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg z-10">
+              <h3 class="text-sm font-semibold text-gray-900 mb-2">Salt Cam</h3>
+              <p class="text-sm text-gray-600">Bağdat Caddesi, Kadıköy</p>
+              <p class="text-sm text-gray-600">İstanbul, Türkiye</p>
+              <a href="https://maps.google.com/?q=Salt+Cam" target="_blank"
+                class="inline-flex items-center text-sm text-primary mt-2 hover:text-primary/80 whitespace-nowrap">
+                <span>Google Haritalar'da Aç</span>
+                <i class="ri-external-link-line ri-sm ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <footer class="bg-sky-100 text-gray-800 pt-16 pb-8 animate-fade-in-up motion-safe:animate-fade-in-up">
+      <div class="container mx-auto px-4">
+
+        <!-- Grid: 3 Eşit Sütun -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+          <!-- Company Info -->
+          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-100">
+            <a href="/elitProfil" class="inline-block mb-4 transform hover:scale-105 transition-transform duration-300">
+              <img src="logo.png" alt="Logo" class="h-20 w-auto">
+            </a>
+            <p class="text-gray-600 mb-6 max-w-xs">2005’ten bu yana yenilikçi endüstriyel çözümler sunuyoruz. Kalite ve
+              müşteri memnuniyetinde mükemmellik hedefimizdir.</p>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
+                <i class="ri-facebook-fill text-xl"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
+                <i class="ri-twitter-x-fill text-xl"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
+                <i class="ri-youtube-fill text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-200">
+            <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+              <i class="ri-links-line text-blue-600"></i> Hızlı Linkler
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="/elitProfil/#hero"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-home-line mr-2"></i>Anasayfa
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#product"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-box-3-line mr-2"></i>Ürünlerimiz
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#about"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-information-line mr-2"></i>Neden Biz?
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#catalogue"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-booklet-line mr-2"></i>Katalog
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="certs.html"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-award-line mr-2"></i>Sertifikalar
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-phone-line mr-2"></i>İletişim
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+          <!-- Contact Info -->
+          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-300">
+            <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+              <i class="ri-contacts-line text-blue-600"></i> İletişim
+            </h3>
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex items-start justify-center md:justify-start">
+                <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
+                <span>
+                  Genel Merkez<br>
+                  Hüseyin Okan Merzeci Mh.<br>
+                  Akbelen Bulvarı No:177/A<br>
+                  33090, Toroslar, Mersin, Türkiye
+                </span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <i class="ri-phone-line mr-3 text-blue-600"></i>
+                <span>+90 (324) 324 3939</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <i class="ri-mail-line mr-3 text-blue-600"></i>
+                <span>saltcam@saltcam.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="pt-8 border-t border-gray-300 flex justify-center items-center animate-fade-in-up delay-500">
+          <p class="text-gray-500 text-center">© 2025 Salt Cam. Tüm Hakları Saklıdır.</p>
+        </div>
+      </div>
     </footer>
-</div>
-<!-- Toast notification for copy -->
-<div id="toast" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded shadow-lg transform translate-y-10 opacity-0 transition-all duration-300 flex items-center">
-<i class="ri-check-line ri-lg mr-2 text-green-400"></i>
-<span id="toast-message">Panoya kopyalandı!</span>
-</div>
-<script src="contact.js"></script>
+
+  </div>
+  <!-- Toast notification for copy -->
+  <div id="toast"
+    class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded shadow-lg transform translate-y-10 opacity-0 transition-all duration-300 flex items-center">
+    <i class="ri-check-line ri-lg mr-2 text-green-400"></i>
+    <span id="toast-message">Panoya kopyalandı!</span>
+  </div>
+  <script src="contact.js"></script>
 
 </body>
+
 </html>
