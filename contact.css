@@ -1,14 +1,4 @@
 
-body {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            margin: 0;
-            /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
-            background-color: #bcd4e6;
-
-
-
-        }
 
 @keyframes float {
 0% { transform: translateY(0px); }

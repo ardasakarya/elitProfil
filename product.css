@@ -1,13 +1,12 @@
-body {
+ body {
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             margin: 0;
             /* Header'ı sabitlediğin için içerik yukarı yapışmasın */
-            background-color: #bcd4e6;
-
-
-
+            background-color: #f9fafb;
+            background-image: radial-gradient(circle at 50% 50%, #e6efff 0%, #f9fafb 70%);
         }
+
 
 
 /* Ürün İçeriği */
