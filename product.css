@@ -21,17 +21,19 @@
     }
 }
  .container {
+    
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
     width: 100%; /* Yatayda %100 genişlik */
 }
 .product-content-wrapper {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    margin-top: 6rem;
+    margin-top: 8rem;
     background-color: #ffffff;
     padding: 3rem;
     border-radius: 20px;
