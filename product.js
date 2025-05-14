@@ -15,7 +15,7 @@ const productData = {
     standart: {
         title: "Standart Ürün 1",
         description:"Bu ürün, standart ısıcam profilleri için özel olarak tasarlanmış dayanıklı ve uzun ömürlü bir seçenektir. Uygun fiyatlıdır ve inşaat projelerinde güvenle kullanılabilir. Yüksek kaliteli malzeme ile üretilen bu profiller, kolay montaj ve sağlamlık sağlar.",
-        imgSrc: "1.jpg", // Resmin yolu
+        imgSrc: "product.jpg", // Resmin yolu
        specs: [
   { header: "Ürün", value: ["8,5 mm Standart", "10,5 mm Standart", "11,5 mm Standart", "13,5 mm Standart", "14,5 mm Standart", "15,5 mm Standart"] },
   { header: "Kalınlık", value: ["0,18 mm", "0,18 mm", "0,18 mm", "0,21 mm", "0,21 mm", "0,21 mm"] },
@@ -30,7 +30,7 @@ const productData = {
     bukulebilir: {
         title: "Bükülebilir Ürün 2",
         description: "Bu bükülebilir ısıcam profilleri, esnek yapısı sayesinde farklı projelerde kullanılabilir. Dayanıklı ve uzun ömürlüdür, ayrıca estetik açıdan şık bir görünüm sunar. Çeşitli şekillerde bükülerek projelere uyum sağlar ve kolay montaj imkânı sunar.",
-        imgSrc: "2.webp", // Resmin yolu
+        imgSrc: "product.jpg", // Resmin yolu
        specs: [
   { header: "Ürün", value: ["8,5 mm Standart", "10,5 mm Standart", "11,5 mm Standart", "13,5 mm Standart", "14,5 mm Standart", "15,5 mm Standart"] },
   { header: "Kalınlık", value: ["0,18 mm", "0,18 mm", "0,18 mm", "0,21 mm", "0,21 mm", "0,21 mm"] },
@@ -45,7 +45,7 @@ const productData = {
         boyali: {
         title: "Boyalı Ürün 2",
         description: "Boyalı ısıcam profilleri, estetik görünümleri ve yüksek dayanıklılıkları ile dikkat çeker. Dış mekan koşullarına karşı dayanıklıdır, uzun ömürlüdür ve renk seçenekleriyle çeşitli projelere uyum sağlar. Kolay bakım gerektirir ve modern tasarımlar için idealdir.",
-        imgSrc: "3.jpg", // Resmin yolu
+        imgSrc: "product.jpg", // Resmin yolu
  specs: [
   { header: "Ürün", value: ["8,5 mm Butilli", "10,5 mm Butilli", "11,5 mm Butilli", "13,5 mm Butilli", "14,5 mm Butilli", "15,5 mm Butilli"] },
   { header: "Kalınlık", value: ["0,18 mm", "0,18 mm", "0,18 mm", "0,21 mm", "0,21 mm", "0,21 mm"] },
@@ -60,7 +60,7 @@ const productData = {
          butilli: {
         title: "Butilli Ürün 2",
         description: "Butilli ısıcam profilleri, esnekliği ve dayanıklılığı ile bilinir. Bu profiller, özellikle uzun süreli kullanım için uygundur ve farklı hava koşullarına karşı dayanıklıdır. Butilli yapı, suya karşı yüksek direnç sağlar ve yüksek ısı yalıtımı sunar.",
-        imgSrc: "4.jpg", // Resmin yolu
+        imgSrc: "product.jpg", // Resmin yolu
   specs:  [
   { header: "Ürün", value: ["8,5 mm Butilli", "10,5 mm Butilli", "11,5 mm Butilli", "13,5 mm Butilli", "14,5 mm Butilli", "15,5 mm Butilli"] },
   { header: "Kalınlık", value: ["0,18 mm", "0,18 mm", "0,18 mm", "0,21 mm", "0,21 mm", "0,21 mm"] },
