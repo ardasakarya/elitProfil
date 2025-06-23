@@ -19,6 +19,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+const langTr = document.getElementById("lang-tr");
+  const langEn = document.getElementById("lang-en");
+
+  const trImg = langTr.querySelector("img");
+  const enImg = langEn.querySelector("img");
+  const trText = langTr.querySelector("span");
+  const enText = langEn.querySelector("span");
+
+  function setLang(activeBtn, passiveBtn, activeImg, passiveImg, activeText, passiveText) {
+    // Aktif buton (bayrak net, yazı görünür)
+    activeImg.classList.remove("opacity-100", "brightness-100");
+    activeImg.classList.add("opacity-40", "brightness-75");
+    activeText.classList.remove("hidden");
+
+    // Pasif buton (bayrak karartılmış, yazı gizli)
+    passiveImg.classList.remove("opacity-40", "brightness-40");
+    passiveImg.classList.add("opacity-100", "brightness-100");
+    passiveText.classList.add("hidden");
+  }
+
+  langTr.addEventListener("click", () => {
+    setLang(langTr, langEn, trImg, enImg, trText, enText);
+  });
+
+  langEn.addEventListener("click", () => {
+    setLang(langEn, langTr, enImg, trImg, enText, trText);
+  });
+
+  // Başlangıçta TR seçili olsun
+  langTr.click();
+
 document.addEventListener('DOMContentLoaded', function() {
 const cards = document.querySelectorAll('.contact-card');
 cards.forEach((card, index) => {

@@ -17,54 +17,56 @@
 </head>
 
 <body>
-   <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-             <a href="/elitProfil" class="inline-block">
-  <img src="logo.png" alt="Logo" class="h-12 w-auto">
-</a>
+ <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/elitProfil" class="inline-block">
+      <img src="logo.png" alt="Logo" class="h-12 w-auto">
+    </a>
 
-            <nav class="hidden md:flex items-center space-x-8">
-             <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
       <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
       <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
       <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
       <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
       <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
-            </nav>
+    </nav>
 
-            <div class="flex items-center space-x-4">
-                <a href="https://tahsilat.saltcam.com/"
-                class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
-                <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-                E-Ödeme
-             </a>
-             
-                <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
-                    <i class="ri-menu-line ri-lg"></i>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div class="flex items-center space-x-4">
+      <!-- Dil Butonu -->
+    
+<div id="lang-toggle" class="flex items-center border border-gray-300 rounded-sm overflow-hidden shadow-sm">
+  <!-- TR Butonu -->
+  <button id="lang-tr" data-lang="tr"
+    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
+    <img src="https://flagcdn.com/w80/tr.png" alt="TR"
+      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-100" />
+    <span class="relative z-10 text-gray-900 font-semibold text-sm">TR</span>
+  </button>
 
-    <!-- Mobile Menu (Hidden by default) -->
-  <div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
-  <nav class="flex flex-col space-y-6 py-8">
-    <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-    <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
-    <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-    <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
-    <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-    <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
-  </nav>
-
-  <!-- Mobil menüde gösterilecek E-Ödeme bağlantısı -->
-  <a href="https://tahsilat.saltcam.com/"
-     class="flex items-center justify-center gap-2 bg-gray-100 text-black px-4 py-3 rounded-button font-medium hover:bg-gray-200 transition-colors whitespace-nowrap mt-6">
-    <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-    E-Ödeme
-  </a>
+  <!-- ENG Butonu -->
+  <button id="lang-en" data-lang="en"
+    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
+    <img src="https://flagcdn.com/w80/gb.png" alt="ENG"
+      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-40 brightness-75" />
+    <span class="relative z-10 text-gray-900 font-semibold text-sm hidden">ENG</span>
+  </button>
 </div>
 
+      <!-- E-Ödeme Butonu -->
+      <a href="https://tahsilat.saltcam.com/"
+         class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+        <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+        E-Ödeme
+      </a>
+
+      <!-- Hamburger Menü -->
+      <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
+        <i class="ri-menu-line ri-lg"></i>
+      </div>
+    </div>
+  </div>
+</header>
 
   <!-- Hero Section / Ürün Desteği -->
   <section class="relative pt-40 pb-16 px-4 bg-gray-400 text-white">
