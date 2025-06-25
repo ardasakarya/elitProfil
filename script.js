@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle
     const menuButton = document.querySelector('.ri-menu-line').parentElement;
-    const mobileMenu = document.querySelector('.fixed.inset-0.bg-white.z-40.mobile-menu'); // HTML'deki mobil menüye 'mobile-menu' class'ını eklediyseniz, bu seçiciyi '.mobile-menu' olarak değiştirebilirsiniz.
+    const mobileMenu = document.querySelector('.fixed.inset-0.bg-white.z-40');
 
-    if (menuButton && mobileMenu) { // Check if elements exist
-        menuButton.addEventListener('click', function () {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
+    menuButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+    });
+
+    // Menüdeki tüm itemleri seç (örneğin <a> etiketleri)
+    const menuItems = mobileMenu.querySelectorAll('a');
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function () {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
         });
-
-        const menuItems = mobileMenu.querySelectorAll('a');
-        menuItems.forEach(item => {
-            item.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            });
-        });
-    }
-
+    });
+});
     // --- Language Toggle Logic ---
 
     const translations = {
@@ -373,4 +373,3 @@ if (footerNavLinks[5]) footerNavLinks[5].textContent = t.contact;
             window.location.href = `product.html?id=${productId}`;
         });
     });
-});
