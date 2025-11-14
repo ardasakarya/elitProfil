@@ -77,6 +77,7 @@
 }
 
 .product-image-wrapper img {
+    
     width: 100%;
     max-width: 350px;
     aspect-ratio: 4 / 3;
@@ -92,7 +93,12 @@
     filter: brightness(1.1);
     
 }
-
+#productImage
+{
+    height: 300px;
+    width: 100%;
+    max-width: 350px;
+}
 .thumb-img {
     width: 80px;
     height: 80px;
