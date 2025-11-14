@@ -93,6 +93,23 @@
     
 }
 
+.thumb-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid #ccc;
+}
+
+.thumb-img:hover {
+    opacity: 0.8;
+}
+
+/* Mobilde thumbnail’lar yatay olur */
+
+
 
 /* Tablo Tasarımı */
 .table-wrapper {

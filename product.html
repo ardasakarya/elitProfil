@@ -85,15 +85,42 @@
 </div>
   <div class="container">
     <!-- Ürün Başlık, Açıklama ve Görsel Alanı -->
-    <div class="product-content-wrapper">
-      <div class="product-text">
-        <h1 id="productTitle"></h1>
-        <p id="productDescription"></p>
-      </div>
-      <div class="product-image-wrapper">
-        <img id="productImage" src="" alt="Ürün Resmi" />
-      </div>
+<div class="product-content-wrapper grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-4 md:p-6">
+
+    <!-- Sol Taraf: Yazılar -->
+    <div class="product-text space-y-4">
+        <h1 id="productTitle" class="text-3xl font-bold"></h1>
+        <p id="productDescription" class="text-gray-600"></p>
     </div>
+
+    <!-- Sağ Taraf: Fotoğraflar -->
+    <div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-center lg:items-start w-full">
+
+        <!-- Büyük Fotoğraf -->
+        <img id="productImage"
+             src=""
+             alt="Ürün Resmi"
+             class="w-full max-w-full lg:w-[500px] aspect-square object-cover 
+                    rounded-xl shadow-lg">
+
+        <!-- Thumbnails -->
+        <div id="thumbnailContainer"
+             class="flex flex-row lg:flex-col gap-3 
+                    overflow-x-auto lg:overflow-y-auto 
+                    max-h-[120px] lg:max-h-[500px]
+                    w-full lg:w-auto 
+                    pb-2 lg:pb-0 lg:pr-2">
+
+            <!-- JS ile doldurulacak -->
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
 
     <!-- Özellikler Tablosu -->
      <div class="table-wrapper">

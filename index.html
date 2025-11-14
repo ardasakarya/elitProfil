@@ -2,258 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elit Profil</title>
-    <link rel="website icon" type="png" href="logo.png">
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script>tailwind.config = { theme: { extend: { colors: { primary: '#3b82f6', secondary: '#10b981' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elit Profil</title>
+  <link rel="website icon" type="png" href="logo.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#3b82f6', secondary: '#10b981' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
 </head>
 
 <body>
-    <!-- Header -->
+  <!-- Header -->
   <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/elitProfil" class="inline-block">
-      <img src="logo.png" alt="Logo" class="h-12 w-auto">
-    </a>
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/elitProfil" class="inline-block">
+        <img src="logo.png" alt="Logo" class="h-12 w-auto">
+      </a>
 
-    <nav class="hidden md:flex items-center space-x-8">
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
+        <a href="#featured-products"
+          class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
+        <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
+        <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
+        <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
+        <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <!-- Dil Butonu -->
+
+        <div id="lang-toggle" class="flex items-center border border-gray-300 rounded-sm overflow-hidden shadow-sm">
+          <button id="lang-tr" data-lang="tr"
+            class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
+            <img src="https://flagcdn.com/w80/tr.png" alt="TR"
+              class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-100" />
+            <span class="relative z-10 text-gray-900 font-semibold text-sm">TR</span>
+          </button>
+
+          <button id="lang-en" data-lang="en"
+            class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
+            <img src="https://flagcdn.com/w80/gb.png" alt="ENG"
+              class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-40 brightness-75" />
+            <span class="relative z-10 text-gray-900 font-semibold text-sm hidden">ENG</span>
+          </button>
+        </div>
+
+        <!-- E-Ödeme Butonu -->
+        <a href="https://tahsilat.saltcam.com/"
+          class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+          E-Ödeme
+        </a>
+
+        <!-- Hamburger Menü -->
+        <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
+          <i class="ri-menu-line ri-lg"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
+    <nav class="flex flex-col space-y-6 py-8">
       <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-      <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
+      <a href="#featured-products"
+        class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
       <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
       <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
       <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
       <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
     </nav>
 
-    <div class="flex items-center space-x-4">
-      <!-- Dil Butonu -->
-    
-<div id="lang-toggle" class="flex items-center border border-gray-300 rounded-sm overflow-hidden shadow-sm">
-  <button id="lang-tr" data-lang="tr"
-    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
-    <img src="https://flagcdn.com/w80/tr.png" alt="TR"
-      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-100" />
-    <span class="relative z-10 text-gray-900 font-semibold text-sm">TR</span>
-  </button>
-
-  <button id="lang-en" data-lang="en"
-    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
-    <img src="https://flagcdn.com/w80/gb.png" alt="ENG"
-      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-40 brightness-75" />
-    <span class="relative z-10 text-gray-900 font-semibold text-sm hidden">ENG</span>
-  </button>
-</div>
-
-      <!-- E-Ödeme Butonu -->
-      <a href="https://tahsilat.saltcam.com/"
-         class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
-        <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-        E-Ödeme
-      </a>
-
-      <!-- Hamburger Menü -->
-      <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
-        <i class="ri-menu-line ri-lg"></i>
-      </div>
-    </div>
+    <!-- Mobil menüde gösterilecek E-Ödeme bağlantısı -->
+    <a href="https://tahsilat.saltcam.com/"
+      class="flex items-center justify-center gap-2 bg-gray-100 text-black px-4 py-3 rounded-button font-medium hover:bg-gray-200 transition-colors whitespace-nowrap mt-6">
+      <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+      E-Ödeme
+    </a>
   </div>
-</header>
-
-<!-- Mobile Menu (Hidden by default) -->
-<div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
-  <nav class="flex flex-col space-y-6 py-8">
-    <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-    <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
-    <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-    <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
-    <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-    <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
-  </nav>
-
-  <!-- Mobil menüde gösterilecek E-Ödeme bağlantısı -->
-  <a href="https://tahsilat.saltcam.com/"
-     class="flex items-center justify-center gap-2 bg-gray-100 text-black px-4 py-3 rounded-button font-medium hover:bg-gray-200 transition-colors whitespace-nowrap mt-6">
-    <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-    E-Ödeme
-  </a>
-</div>
 
 
-    <main class="pt-16">
-        <!-- Hero Section -->
-        <section class="hero-section w-full min-h-[600px] flex items-center"id="hero">
-            <div class="container mx-auto px-4 w-full">
-                <div class="hero-content max-w-2xl py-20 px-8 md:px-12">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">Aluminyum Isıcam
-                        Profilleri</h1>
-                    <p class="text-lg text-gray-700 mb-8 max-w-lg"> Salt Profil markası ile 2016 yılında üretimine
-                        başlamış olduğumuz "Isıcam Alüminyum Profilleri" nitelikli ısıcam üretiminde yardımcınız
-                        olacaktır. Standart (butilsiz) ve butilli olarak ürettiğimiz profiller, yüksek kalitede
-                        indüksiyon kaynağı ile birleştirilir ve 8.5 mm'den 15.5 mm’e kadar farklı ölçülerde üretilir.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button
-                            class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Ürünleri
-                            Keşfet</button>
+  <main class="pt-16">
+    <!-- Hero Section -->
+<section
+  id="hero"
+  class="relative w-full min-h-[600px] flex items-center justify-left overflow-hidden bg-[url('product_img/genel/SALTC0046.webp')] bg-cover bg-center">
 
-                    </div>
-                </div>
-        </section>
+  <!-- Kayan blur layer (arka planın hareketli yansıması) -->
 
-        <!-- Product Video Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
-              <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ürünlerimizi İş Başında Görün</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                  Yenilikçi çözümlerimizin çeşitli sektörlerde iş akışlarını nasıl dönüştürdüğünü ve verimliliği nasıl artırdığını izleyin.
-                </p>
-              </div>
-          
-              <div class="max-w-4xl mx-auto group relative rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-[0_10px_40px_rgba(0,0,0,0.2)]">
-                <!-- Video Container -->
-                <div class="relative w-full aspect-w-16 aspect-h-9 bg-black overflow-hidden">
-                    <video autoplay muted loop controls
-                      class="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition duration-500 rounded-t-3xl">
-                      <source src="saltcam.mp4" type="video/mp4">
-                      Tarayıcınız video etiketini desteklemiyor.
-                    </video>
-                  </div>
-                  
-                <!-- Description -->
-                <div class="bg-white p-6 rounded-b-3xl">
-                    <div class="flex items-center gap-3 mb-2">
-                      <!-- Play Icon -->
-                      <svg class="w-8 h-8 text-blue-500 p-2 bg-blue-100 rounded-full shadow-lg transition-transform transform hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="5,3 19,12 5,21" />
-                      </svg>
-                      
-                      <h3 class="text-xl font-semibold text-gray-800 group-hover:text-primary transition-colors">Ultimate Product Demonstration</h3>
-                    </div>
-                    <p class="text-gray-600 group-hover:text-gray-800 transition-colors">
-                      A comprehensive overview of our flagship product line and its key features.
-                    </p>
-                  </div>
-                  
-              </div>
-            </div>
-          </section>
-          
+
+  <!-- Cam içerik kutusu -->
+  <div
+    class="relative z-10 w-full max-w-2xl mx-4 sm:mx-8 md:mx-20 px-6 sm:px-10 py-16 sm:py-20 rounded-[40px]
+           backdrop-blur-sm saturate-150 brightness-110
+           border border-white/20
+           shadow-[inset_0_0_1px_rgba(255,255,255,0.5),0_8px_25px_rgba(0,0,0,0.2)]
+           transition-all duration-500 hover:-translate-y-1 hover:shadow-[inset_0_0_1px_rgba(255,255,255,0.5),0_12px_35px_rgba(0,0,0,0.3)]
+           overflow-hidden text-center">
+
+    <!-- Highlight efekti -->
+    <div
+      class="absolute top-[-25%] left-[-25%] w-[150%] h-[150%]
+             bg-[radial-gradient(circle_at_30%_10%,rgba(255,255,255,0.4)_0%,rgba(255,255,255,0.1)_30%,rgba(255,255,255,0)_60%)]
+             opacity-60 pointer-events-none">
+    </div>
+
+    <!-- İçerik -->
+    <h1 class="relative text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 z-10 drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]">
+      Aluminyum Isıcam Profilleri
+    </h1>
+
+    <p class="relative text-base sm:text-lg mb-8 max-w-lg mx-auto z-10 text-gray-100 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
+      Salt Profil markası ile 2016 yılında üretimine başlamış olduğumuz "Isıcam Alüminyum Profilleri"
+      nitelikli ısıcam üretiminde yardımcınız olacaktır. Standart (butilsiz) ve butilli olarak ürettiğimiz profiller,
+      yüksek kalitede indüksiyon kaynağı ile birleştirilir ve 8.5 mm'den 15.5 mm’e kadar farklı ölçülerde üretilir.
+    </p>
+
+    <!-- Buton -->
+    <div class="relative flex flex-col sm:flex-row gap-4 justify-center z-10">
+      <button
+        class="bg-black/40 text-white px-6 py-3 rounded-full font-medium hover:bg-black/60 transition-all border border-white/20 backdrop-blur-sm shadow-md hover:shadow-lg">
+        Ürünleri Keşfet
+      </button>
+    </div>
+
+  </div>
+</section>
 
 
 
 
-        <!-- Product Showcase -->
-         
-  <section class="py-20 bg-gray-50" id="featured-products">
+    <!-- Product Video Section -->
+   <section class="py-20">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-16" id="featured-products-header">
-      <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Featured Products</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-        Explore our most popular products designed to meet the highest industry standards.
+    <!-- Başlık -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ürünlerimizi İş Başında Görün</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Yenilikçi çözümlerimizin çeşitli sektörlerde iş akışlarını nasıl dönüştürdüğünü ve verimliliği nasıl
+        artırdığını izleyin.
       </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <!-- Product Card Template -->
-      <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-        <div class="h-64 overflow-hidden rounded-t-3xl">
-          <img src="product.jpg" alt="Standart"
-               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="p-6 flex flex-col justify-between h-64">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Standart</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Flagship industrial processor with advanced automation and energy-efficient design.
-            </p>
-          </div>
-          <div class="mt-6">
-            <button
-              data-id="standart"
-              class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
-              İncele
-            </button>
-          </div>
-        </div>
-      </div>
+    <!-- Glassmorphism Video Card -->
+    <div
+      class="relative max-w-4xl mx-auto group rounded-3xl overflow-hidden
+             bg-white/10 backdrop-blur-md saturate-150 border border-white/20
+             shadow-[inset_0_0_1px_rgba(255,255,255,0.5),0_8px_25px_rgba(0,0,0,0.15)]
+             transition-all duration-500 hover:shadow-[0_10px_40px_rgba(0,0,0,0.2)]">
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-        <div class="h-64 overflow-hidden rounded-t-3xl">
-          <img src="product.jpg" alt="Bükülebilir"
-               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="p-6 flex flex-col justify-between h-64">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Bükülebilir</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Centralized control system with intuitive interface and seamless integration.
-            </p>
-          </div>
-          <div class="mt-6">
-            <button
-              data-id="bukulebilir"
-              class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
-              İncele
-            </button>
-          </div>
-        </div>
-      </div>
+      <!-- Video Container -->
+      <!-- Video Container (BÜYÜTÜLMÜŞ) -->
+<div class="relative w-full 
+            max-w-[1600px] mx-auto    
+            aspect-[16/16] sm:aspect-[16/12] lg:aspect-[16/10]   
+            overflow-hidden rounded-t-3xl">
+  <video autoplay muted loop controls
+    class="w-full h-full object-cover brightness-95 group-hover:brightness-100 transition duration-500">
+    <source src="saltcam.mp4" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+</div>
 
-      <!-- Card 3 -->
-      <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-        <div class="h-64 overflow-hidden rounded-t-3xl">
-          <img src="product.jpg" alt="Boyalı"
-               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="p-6 flex flex-col justify-between h-64">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Boyalı</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              High-precision monitoring system with real-time analytics and predictive maintenance.
-            </p>
-          </div>
-          <div class="mt-6">
-            <button
-             data-id="boyali"
-              class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
-              İncele
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 4 -->
-      <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-        <div class="h-64 overflow-hidden rounded-t-3xl">
-          <img src="product.jpg" alt="Butilli"
-               class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+
+      <!-- Description -->
+      <div class="p-6 rounded-b-3xl text-center sm:text-left">
+        <div class="flex items-center justify-center sm:justify-start gap-3 mb-2">
+          <!-- Play Icon -->
+          <svg
+            class="w-8 h-8 text-blue-500 p-2 bg-blue-100 rounded-full shadow-lg transition-transform transform hover:scale-110"
+            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5,3 19,12 5,21" />
+          </svg>
+
+          <h3 class="text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors">
+            Ultimate Product Demonstration
+          </h3>
         </div>
-        <div class="p-6 flex flex-col justify-between h-64">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Butilli</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Compact and rugged data logging device with extended memory and wireless capabilities.
-            </p>
-          </div>
-          <div class="mt-6">
-            <button
-              data-id="butilli"
-              class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
-              İncele
-            </button>
-          </div>
-        </div>
+        <p class="text-gray-800 group-hover:text-gray-900 transition-colors">
+          A comprehensive overview of our flagship product line and its key features.
+        </p>
       </div>
 
     </div>
@@ -261,129 +198,273 @@
 </section>
 
 
-        <!-- Features/Benefits Section -->
-        <section class="py-20"  id="about">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Neden Elit Profil’i Tercih Etmelisiniz?</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Rakiplerimizden ayrışmamızı sağlayan avantajlarımızı keşfedin.</p>
-                </div>
-        
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                    
-                    <!-- Kartlar -->
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-shield-check-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Üstün Kalite</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Yüksek kaliteli alüminyum ve titiz üretim süreçleriyle uzun ömürlü ve dayanıklı profil sistemleri.</p>
-                    </div>
-        
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-line-chart-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">Enerji Verimliliği</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Isı yalıtımı sağlayan tasarımıyla enerji tasarrufuna katkı sağlar, ısı kayıplarını minimuma indirir.</p>
-                    </div>
-        
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-customer-service-2-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Uzman Destek</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Kurulumdan sonraki süreçlerde de teknik destek ekibimiz her zaman yanınızda.</p>
-                    </div>
-        
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-recycle-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">Çevre Dostu</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Geri dönüştürülebilir malzeme kullanımı ve doğaya duyarlı üretim anlayışı.</p>
-                    </div>
-        
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-tools-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Kolay Uyum</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Mevcut pencere ve cephe sistemlerine sorunsuz entegre edilebilir, montaj kolaylığı sağlar.</p>
-                    </div>
-        
-                    <div class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
-                        <div class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
-                            <i class="ri-rocket-line ri-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">Geleceğe Hazır Teknoloji</h3>
-                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Yenilikçi çözümlerimiz, sektör standartlarının ötesinde performans sunar ve gelecekteki ihtiyaçlara da cevap verir.</p>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-        
-
-        <!-- Testimonials Section -->
 
 
-        <!-- Catalogue Section -->
-        <section class="catalogue-section py-20  bg-transparent" id="catalogue">
-  <div class="container mx-auto px-4">
-    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-      <div class="md:flex">
-        <!-- Sol taraf: Yazı ve butonlar -->
-        <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Download Our Product Catalogue</h2>
-          <p class="text-gray-600 mb-8">
-            Get comprehensive information about our complete product line, technical specifications, and pricing in our latest catalogue.
+
+    <!-- Product Showcase -->
+
+    <section class="py-20 bg-gray-50" id="featured-products">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" id="featured-products-header">
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Featured Products</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+            Explore our most popular products designed to meet the highest industry standards.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <!-- İNDİR -->
-            <a
-              href="Salt-profil.pdf"
-              download
-              class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap flex items-center justify-center">
-              <i class="ri-download-line mr-2"></i>
-              Download PDF
-            </a>
-            <!-- GÖRÜNTÜLE -->
-            <a
-              href="Salt-profil.pdf"
-              target="_blank"
-              class="bg-white text-gray-800 border border-gray-300 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap flex items-center justify-center">
-              <i class="ri-file-pdf-line mr-2 text-red-600"></i>
-              View PDF
-            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Product Card Template -->
+          <div
+            class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+            <div class="h-64 overflow-hidden rounded-t-3xl">
+              <img src="product_img/standart/SALTC0027.webp" alt="Standart"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col justify-between h-64">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Standart</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Flagship industrial processor with advanced automation and energy-efficient design.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button data-id="standart"
+                  class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
+                  İncele
+                </button>
+              </div>
+            </div>
           </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+            <div class="h-64 overflow-hidden rounded-t-3xl">
+              <img src="product_img/bükülebilir/SALTC0068.webp" alt="Bükülebilir"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col justify-between h-64">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Bükülebilir</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Centralized control system with intuitive interface and seamless integration.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button data-id="bukulebilir"
+                  class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
+                  İncele
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+            <div class="h-64 overflow-hidden rounded-t-3xl">
+              <img src="product_img/genel/SALTC0045.webp" alt="Boyalı"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col justify-between h-64">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Boyalı</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  High-precision monitoring system with real-time analytics and predictive maintenance.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button data-id="boyali"
+                  class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
+                  İncele
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+            <div class="h-64 overflow-hidden rounded-t-3xl">
+              <img src="product_img/butilli/SALTC0055.webp" alt="Butilli"
+                class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+            </div>
+            <div class="p-6 flex flex-col justify-between h-64">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Butilli</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  Compact and rugged data logging device with extended memory and wireless capabilities.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button data-id="butilli"
+                  class="detay-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl shadow hover:shadow-md transition">
+                  İncele
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Features/Benefits Section -->
+    <section class="py-20" id="about">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Neden Elit Profil’i Tercih Etmelisiniz?</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Rakiplerimizden ayrışmamızı sağlayan avantajlarımızı keşfedin.</p>
         </div>
 
-        <!-- Sağ taraf: Görsel galeri -->
-        <div class="md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white p-2 shadow-sm rounded">
-              <img src="https://readdy.ai/api/search-image?query=product%20catalogue%20page%20with%20industrial%20equipment%2C%20professional%20layout%2C%20technical%20specifications%2C%20high%20quality%20print%20material&width=300&height=400&seq=123464&orientation=portrait"
-                alt="Catalogue page 1" class="w-full h-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+
+          <!-- Kartlar -->
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-shield-check-line ri-xl"></i>
             </div>
-            <div class="bg-white p-2 shadow-sm rounded">
-              <img src="https://readdy.ai/api/search-image?query=product%20catalogue%20page%20with%20technical%20diagrams%2C%20industrial%20equipment%20specifications%2C%20professional%20layout%2C%20high%20quality%20print%20material&width=300&height=400&seq=123465&orientation=portrait"
-                alt="Catalogue page 2" class="w-full h-auto">
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              Üstün Kalite</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Yüksek kaliteli alüminyum
+              ve titiz üretim süreçleriyle uzun ömürlü ve dayanıklı profil sistemleri.</p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-line-chart-line ri-xl"></i>
             </div>
-            <div class="bg-white p-2 shadow-sm rounded">
-              <img src="https://readdy.ai/api/search-image?query=product%20catalogue%20page%20with%20pricing%20tables%2C%20industrial%20equipment%20options%2C%20professional%20layout%2C%20high%20quality%20print%20material&width=300&height=400&seq=123466&orientation=portrait"
-                alt="Catalogue page 3" class="w-full h-auto">
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">
+              Enerji Verimliliği</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Isı yalıtımı sağlayan
+              tasarımıyla enerji tasarrufuna katkı sağlar, ısı kayıplarını minimuma indirir.</p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-customer-service-2-line ri-xl"></i>
             </div>
-            <div class="bg-white p-2 shadow-sm rounded">
-              <img src="https://readdy.ai/api/search-image?query=product%20catalogue%20page%20with%20case%20studies%2C%20industrial%20equipment%20applications%2C%20professional%20layout%2C%20high%20quality%20print%20material&width=300&height=400&seq=123467&orientation=portrait"
-                alt="Catalogue page 4" class="w-full h-auto">
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              Uzman Destek</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Kurulumdan sonraki
+              süreçlerde de teknik destek ekibimiz her zaman yanınızda.</p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-recycle-line ri-xl"></i>
             </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">
+              Çevre Dostu</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Geri dönüştürülebilir
+              malzeme kullanımı ve doğaya duyarlı üretim anlayışı.</p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-tools-line ri-xl"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              Kolay Uyum</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Mevcut pencere ve cephe
+              sistemlerine sorunsuz entegre edilebilir, montaj kolaylığı sağlar.</p>
+          </div>
+
+          <div
+            class="group bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 relative overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transform ease-in-out">
+            <div
+              class="w-14 h-14 flex items-center justify-center bg-green-100 text-green-600 rounded-full mb-6 transition-transform duration-300 group-hover:rotate-12">
+              <i class="ri-rocket-line ri-xl"></i>
+            </div>
+            <h3
+              class="text-xl font-semibold mb-3 text-gray-800 group-hover:text-green-600 transition-colors duration-300">
+              Geleceğe Hazır Teknoloji</h3>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Yenilikçi çözümlerimiz,
+              sektör standartlarının ötesinde performans sunar ve gelecekteki ihtiyaçlara da cevap verir.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+
+
+    <!-- Catalogue Section -->
+    <section class="catalogue-section py-20  bg-transparent" id="catalogue">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <!-- Sol taraf: Yazı ve butonlar -->
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <h2 class="text-3xl font-bold text-gray-900 mb-4">Download Our Product Catalogue</h2>
+              <p class="text-gray-600 mb-8">
+                Get comprehensive information about our complete product line, technical specifications, and pricing in
+                our latest catalogue.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <!-- İNDİR -->
+                <a href="Salt-profil.pdf" download
+                  class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap flex items-center justify-center">
+                  <i class="ri-download-line mr-2"></i>
+                  Download PDF
+                </a>
+                <!-- GÖRÜNTÜLE -->
+                <a href="Salt-profil.pdf" target="_blank"
+                  class="bg-white text-gray-800 border border-gray-300 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap flex items-center justify-center">
+                  <i class="ri-file-pdf-line mr-2 text-red-600"></i>
+                  View PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Sağ taraf: Görsel galeri -->
+            <div class="md:w-1/2 bg-gray-100 p-8 flex items-center justify-center">
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-white p-2 shadow-sm rounded">
+      <img
+        src="product_img/genel/katalog.webp"
+        alt="Catalogue page 1" class="w-full h-auto">
+    </div>
+    <div class="bg-white p-2 shadow-sm rounded">
+      <img
+        src="product_img/genel/katalog2.webp"
+        alt="Catalogue page 2" class="w-full h-auto">
+    </div>
+    <div class="bg-white p-2 shadow-sm rounded">
+      <img
+        src="product_img/genel/katalog3.webp"
+        alt="Catalogue page 3" class="w-full h-auto">
+    </div>
+    <div class="bg-white p-2 shadow-sm rounded">
+      <img
+        src="product_img/genel/katalog4.webp"
+        alt="Catalogue page 4" class="w-full h-auto">
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -419,118 +500,120 @@
           </div>
 
           <!-- Quick Links -->
-    <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-200">
-  <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
-    <i class="ri-links-line text-blue-600"></i> Hızlı Linkler
-  </h3>
-  <ul class="space-y-3">
-    <li>
-      <a href="/elitProfil/#hero"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-home-line mr-2"></i><span class="nav-text">Anasayfa</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-    <li>
-      <a href="/elitProfil/#product"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-box-3-line mr-2"></i><span class="nav-text">Ürünlerimiz</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-    <li>
-      <a href="/elitProfil/#about"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-information-line mr-2"></i><span class="nav-text">Neden Biz?</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-    <li>
-      <a href="/elitProfil/#catalogue"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-booklet-line mr-2"></i><span class="nav-text">Katalog</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-    <li>
-      <a href="certs.html"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-award-line mr-2"></i><span class="nav-text">Sertifikalar</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-    <li>
-      <a href="contact.html"
-        class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-        <i class="ri-phone-line mr-2"></i><span class="nav-text">İletişim</span>
-        <span
-          class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-      </a>
-    </li>
-  </ul>
-</div>
+          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-200">
+            <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
+              <i class="ri-links-line text-blue-600"></i> Hızlı Linkler
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="/elitProfil/#hero"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-home-line mr-2"></i><span class="nav-text">Anasayfa</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#product"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-box-3-line mr-2"></i><span class="nav-text">Ürünlerimiz</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#about"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-information-line mr-2"></i><span class="nav-text">Neden Biz?</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/elitProfil/#catalogue"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-booklet-line mr-2"></i><span class="nav-text">Katalog</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="certs.html"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-award-line mr-2"></i><span class="nav-text">Sertifikalar</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html"
+                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+                  <i class="ri-phone-line mr-2"></i><span class="nav-text">İletişim</span>
+                  <span
+                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <!-- Contact Info -->
-      <div class="animate-fade-in-up delay-300">
-  <!-- Ortak Başlık -->
-  <h3 class="text-lg font-semibold mb-6 flex items-center gap-2 justify-center md:justify-start text-center md:text-left">
-    <i class="ri-contacts-line text-blue-600"></i> İletişim
-  </h3>
+          <div class="animate-fade-in-up delay-300">
+            <!-- Ortak Başlık -->
+            <h3
+              class="text-lg font-semibold mb-6 flex items-center gap-2 justify-center md:justify-start text-center md:text-left">
+              <i class="ri-contacts-line text-blue-600"></i> İletişim
+            </h3>
 
-  <!-- Adresler -->
-  <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-center md:items-start text-center md:text-left">
-    
-    <!-- Genel Merkez -->
-    <div>
-      <ul class="space-y-4 text-gray-600">
-        <li class="flex items-start justify-center md:justify-start">
-          <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
-          <span>
-            <strong>Genel Merkez</strong><br>
-            Hüseyin Okan Merzeci Mh.<br>
-            Akbelen Bulvarı No:177/A<br>
-            33090, Toroslar, Mersin, Türkiye
-          </span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-phone-line mr-3 text-blue-600"></i>
-          <span>+90 (324) 324 3939</span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-mail-line mr-3 text-blue-600"></i>
-          <span>saltcam@saltcam.com</span>
-        </li>
-      </ul>
-    </div>
+            <!-- Adresler -->
+            <div
+              class="flex flex-col md:flex-row gap-10 md:gap-20 items-center md:items-start text-center md:text-left">
 
-    <!-- Fabrika -->
-    <div>
-      <ul class="space-y-4 text-gray-600">
-        <li class="flex items-start justify-center md:justify-start">
-          <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
-          <span>
-            <strong>Fabrika</strong><br>
-            Mersin Organize Sanayi Bölgesi<br>
-            Atatürk Bulvarı No:8/A<br>
-            33400, Tarsus, Mersin, Türkiye
-          </span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-phone-line mr-3 text-blue-600"></i>
-          <span>+90 (324) 676 45 10</span>
-        </li>
-      </ul>
-    </div>
+              <!-- Genel Merkez -->
+              <div>
+                <ul class="space-y-4 text-gray-600">
+                  <li class="flex items-start justify-center md:justify-start">
+                    <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
+                    <span>
+                      <strong>Genel Merkez</strong><br>
+                      Hüseyin Okan Merzeci Mh.<br>
+                      Akbelen Bulvarı No:177/A<br>
+                      33090, Toroslar, Mersin, Türkiye
+                    </span>
+                  </li>
+                  <li class="flex items-center justify-center md:justify-start">
+                    <i class="ri-phone-line mr-3 text-blue-600"></i>
+                    <span>+90 (324) 324 3939</span>
+                  </li>
+                  <li class="flex items-center justify-center md:justify-start">
+                    <i class="ri-mail-line mr-3 text-blue-600"></i>
+                    <span>saltcam@saltcam.com</span>
+                  </li>
+                </ul>
+              </div>
 
-  </div>
-</div>
+              <!-- Fabrika -->
+              <div>
+                <ul class="space-y-4 text-gray-600">
+                  <li class="flex items-start justify-center md:justify-start">
+                    <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
+                    <span>
+                      <strong>Fabrika</strong><br>
+                      Mersin Organize Sanayi Bölgesi<br>
+                      Atatürk Bulvarı No:8/A<br>
+                      33400, Tarsus, Mersin, Türkiye
+                    </span>
+                  </li>
+                  <li class="flex items-center justify-center md:justify-start">
+                    <i class="ri-phone-line mr-3 text-blue-600"></i>
+                    <span>+90 (324) 676 45 10</span>
+                  </li>
+                </ul>
+              </div>
 
-          
+            </div>
+          </div>
+
+
         </div>
 
         <!-- Footer Bottom -->
