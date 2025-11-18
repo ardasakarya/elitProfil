@@ -17,13 +17,23 @@
   });
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+    const menuButton = document.getElementById('mobile-menu-button'); // ☰
+    const mobileMenu = document.getElementById('mobile-menu');        // MENÜ
+    const closeButton = document.getElementById('mobile-close');      // ✕
 
+    // ☰ Menü Aç / Kapat
     menuButton.addEventListener('click', function () {
         mobileMenu.classList.toggle('hidden');
+
+        // Hamburger gizlensin (açıkken)
+        menuButton.classList.toggle('hidden');
+    });
+
+    // ✕ Menü Kapat
+    closeButton.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        menuButton.classList.remove('hidden'); // hamburger geri gelsin
     });
 
     // Menüdeki tüm itemlere tıklayınca menüyü kapat
@@ -31,9 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
     menuItems.forEach(item => {
         item.addEventListener('click', function () {
             mobileMenu.classList.add('hidden');
+            menuButton.classList.remove('hidden');
         });
     });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -17,6 +17,19 @@
             background-size: cover;
             background-position: center;
         }
+/* ekle bu CSS'i global stilinize */
+#mobile-close {
+  z-index: 60;          /* nav z-40 ise üstte olsun */
+  pointer-events: auto; /* overlay tarafından engellenmeyi önle */
+}
+#mobile-menu-button {
+  z-index: 70; /* hamburger butonu sağlıklı çalışsın */
+}
+#mobile-menu {
+  z-index: 50; /* gerektiği gibi ayarla */
+}
+
+
 
     
 @keyframes float-bg {
