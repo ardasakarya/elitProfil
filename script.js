@@ -1,25 +1,128 @@
+  const header = document.getElementById('header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      // Scroll yapınca açık renk arka plan
+      header.classList.add('bg-white/20', 'backdrop-blur-md');
+      header.classList.remove('bg-transparent');
+      header.querySelectorAll('nav a').forEach(a => a.classList.replace('text-white','text-gray-800'));
+      document.getElementById('mobile-menu-button').classList.replace('text-white','text-gray-800');
+    } else {
+      // En üstteyken eski hali
+      header.classList.remove('bg-white/90', 'backdrop-blur-md');
+      header.classList.add('bg-transparent');
+      header.querySelectorAll('nav a').forEach(a => a.classList.replace('text-gray-800','text-white'));
+      document.getElementById('mobile-menu-button').classList.replace('text-gray-800','text-white');
+    }
+  });
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu toggle
-    const menuButton = document.querySelector('.ri-menu-line').parentElement;
-    const mobileMenu = document.querySelector('.fixed.inset-0.bg-white.z-40');
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     menuButton.addEventListener('click', function () {
         mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
     });
 
-    // Menüdeki tüm itemleri seç (örneğin <a> etiketleri)
+    // Menüdeki tüm itemlere tıklayınca menüyü kapat
     const menuItems = mobileMenu.querySelectorAll('a');
-
     menuItems.forEach(item => {
         item.addEventListener('click', function () {
             mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll("#hero-slider .slide");
+  const dotsContainer = document.getElementById("slider-dots");
+  let index = 0;
+
+  // Dotları oluştur
+  slides.forEach((_, i) => {
+    const dot = document.createElement("div");
+    dot.className = "w-3 h-3 rounded-full bg-white/50 cursor-pointer transition-colors";
+    if (i === 0) dot.classList.add("bg-white");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#slider-dots > div");
+
+  function goToSlide(i) {
+    slides[index].classList.remove("opacity-100");
+    slides[index].classList.add("opacity-0");
+    dots[index].classList.remove("bg-white");
+    dots[index].classList.add("bg-white/50");
+
+    index = i;
+
+    slides[index].classList.remove("opacity-0");
+    slides[index].classList.add("opacity-100");
+    dots[index].classList.remove("bg-white/50");
+    dots[index].classList.add("bg-white");
+  }
+
+  function nextSlide() {
+    goToSlide((index + 1) % slides.length);
+  }
+
+  setInterval(nextSlide, 3000);
+});
+
+
+
+
     // --- Language Toggle Logic ---
 
+
+function toggleLanguage(knob, flag, leftText, rightText, isMobile = false) {
+    const isTR = rightText.style.opacity !== "0";
+
+    const moveX = isMobile ? 52 : 44;
+
+    if (isTR) {
+        // → EN GEÇİŞ
+        knob.style.transform = `translateX(${moveX}px)`;
+        flag.src = "uk.png";  // BAYRAK DEĞİŞİYOR
+
+        leftText.style.opacity = "1";   
+        rightText.style.opacity = "0";  
+    } else {
+        // ← TR GERİ DÖNÜŞ
+        knob.style.transform = "translateX(0px)";
+        flag.src = "tr.webp";  // TEKRAR TR BAYRAĞI
+
+        leftText.style.opacity = "0";
+        rightText.style.opacity = "1";
+    }
+}
+
+// Desktop
+document.getElementById("langToggle").addEventListener("click", () => {
+    toggleLanguage(
+        document.getElementById("langKnob"),
+        document.getElementById("langFlag"),
+        document.getElementById("langTextLeft"),
+        document.getElementById("langTextRight"),
+        false
+    );
+});
+
+// Mobile
+document.getElementById("langToggleMobile").addEventListener("click", () => {
+    toggleLanguage(
+        document.getElementById("langKnobMobile"),
+        document.getElementById("langFlagMobile"),
+        document.getElementById("langTextLeftMobile"),
+        document.getElementById("langTextRightMobile"),
+        true
+    );
+});
+    
     const translations = {
         tr: {
             // Header
