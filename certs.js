@@ -1,23 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu toggle
-    const menuButton = document.querySelector('.ri-menu-line').parentElement;
-    const mobileMenu = document.querySelector('.fixed.inset-0.bg-white.z-40');
+fetch("header.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("header-container").innerHTML = html;
 
-    menuButton.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenu.classList.toggle('flex');
-    });
+    const s = document.createElement("script");
+    s.src = "header.js";
+    s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
+    document.body.appendChild(s);
+  });
 
-    // Menüdeki tüm itemleri seç (örneğin <a> etiketleri)
-    const menuItems = mobileMenu.querySelectorAll('a');
 
-    menuItems.forEach(item => {
-        item.addEventListener('click', function () {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        });
-    });
-});
+
 
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -1,50 +1,13 @@
-  const header = document.getElementById('header');
+fetch("header.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("header-container").innerHTML = html;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      // Scroll yapınca açık renk arka plan
-      header.classList.add('bg-white/20', 'backdrop-blur-md');
-      header.classList.remove('bg-transparent');
-      header.querySelectorAll('nav a').forEach(a => a.classList.replace('text-white','text-gray-800'));
-      document.getElementById('mobile-menu-button').classList.replace('text-white','text-gray-800');
-    } else {
-      // En üstteyken eski hali
-      header.classList.remove('bg-white/90', 'backdrop-blur-md');
-      header.classList.add('bg-transparent');
-      header.querySelectorAll('nav a').forEach(a => a.classList.replace('text-gray-800','text-white'));
-      document.getElementById('mobile-menu-button').classList.replace('text-gray-800','text-white');
-    }
+    const s = document.createElement("script");
+    s.src = "header.js";
+    s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
+    document.body.appendChild(s);
   });
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.getElementById('mobile-menu-button'); // ☰
-    const mobileMenu = document.getElementById('mobile-menu');        // MENÜ
-    const closeButton = document.getElementById('mobile-close');      // ✕
-
-    // ☰ Menü Aç / Kapat
-    menuButton.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-
-        // Hamburger gizlensin (açıkken)
-        menuButton.classList.toggle('hidden');
-    });
-
-    // ✕ Menü Kapat
-    closeButton.addEventListener('click', function () {
-        mobileMenu.classList.add('hidden');
-        menuButton.classList.remove('hidden'); // hamburger geri gelsin
-    });
-
-    // Menüdeki tüm itemlere tıklayınca menüyü kapat
-    const menuItems = mobileMenu.querySelectorAll('a');
-    menuItems.forEach(item => {
-        item.addEventListener('click', function () {
-            mobileMenu.classList.add('hidden');
-            menuButton.classList.remove('hidden');
-        });
-    });
-});
 
 
 
@@ -88,53 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // --- Language Toggle Logic ---
 
-
-function toggleLanguage(knob, flag, leftText, rightText, isMobile = false) {
-    const isTR = rightText.style.opacity !== "0";
-
-    const moveX = isMobile ? 52 : 44;
-
-    if (isTR) {
-        // → EN GEÇİŞ
-        knob.style.transform = `translateX(${moveX}px)`;
-        flag.src = "uk.png";  // BAYRAK DEĞİŞİYOR
-
-        leftText.style.opacity = "1";   
-        rightText.style.opacity = "0";  
-    } else {
-        // ← TR GERİ DÖNÜŞ
-        knob.style.transform = "translateX(0px)";
-        flag.src = "tr.webp";  // TEKRAR TR BAYRAĞI
-
-        leftText.style.opacity = "0";
-        rightText.style.opacity = "1";
-    }
-}
-
-// Desktop
-document.getElementById("langToggle").addEventListener("click", () => {
-    toggleLanguage(
-        document.getElementById("langKnob"),
-        document.getElementById("langFlag"),
-        document.getElementById("langTextLeft"),
-        document.getElementById("langTextRight"),
-        false
-    );
-});
-
-// Mobile
-document.getElementById("langToggleMobile").addEventListener("click", () => {
-    toggleLanguage(
-        document.getElementById("langKnobMobile"),
-        document.getElementById("langFlagMobile"),
-        document.getElementById("langTextLeftMobile"),
-        document.getElementById("langTextRightMobile"),
-        true
-    );
-});
-    
     const translations = {
         tr: {
             // Header

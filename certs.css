@@ -1,5 +1,6 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
  body {
+           overflow-x: hidden;
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             margin: 0;
@@ -7,6 +8,20 @@
             background-color: #f9fafb;
             background-image: radial-gradient(circle at 50% 50%, #e6efff 0%, #f9fafb 70%);
         }
+/* ekle bu CSS'i global stilinize */
+#mobile-close {
+  z-index: 60;          /* nav z-40 ise üstte olsun */
+  pointer-events: auto; /* overlay tarafından engellenmeyi önle */
+}
+#mobile-menu-button {
+  z-index: 70; /* hamburger butonu sağlıklı çalışsın */
+}
+#mobile-menu {
+  z-index: 50; /* gerektiği gibi ayarla */
+}
+
+
+
 
 @keyframes fadeIn {
 from { opacity: 0; }

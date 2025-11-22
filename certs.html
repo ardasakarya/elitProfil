@@ -1,534 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Company Certificates</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#1a4b8c',secondary:'#e8f1ff'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="certs.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Certificates</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#1a4b8c', secondary: '#e8f1ff' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="certs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
 </head>
 
 
 
 
-<body class="min-h-screen fade-in">
+<body class="min-h-screen bg-gradient-to-br from-[#000000] via-[#0a1a33] to-[#001128] text-gray-200">
 
 
+  <div id="header-container"></div>
 
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <!-- Navigation Header -->
 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
 
+      <!-- Certificate Card 1 -->
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-<!-- Navigation Header -->
- <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/elitProfil" class="inline-block">
-      <img src="logo.png" alt="Logo" class="h-12 w-auto">
-    </a>
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
 
-    <nav class="hidden md:flex items-center space-x-8">
-      <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-      <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
-      <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-      <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
-      <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-      <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
-    </nav>
-
-    <div class="flex items-center space-x-4">
-      <!-- Dil Butonu -->
-    
-<div id="lang-toggle" class="flex items-center border border-gray-300 rounded-sm overflow-hidden shadow-sm">
-  <!-- TR Butonu -->
-  <button id="lang-tr" data-lang="tr"
-    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
-    <img src="https://flagcdn.com/w80/tr.png" alt="TR"
-      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-100" />
-    <span class="relative z-10 text-gray-900 font-semibold text-sm">TR</span>
-  </button>
-
-  <!-- ENG Butonu -->
-  <button id="lang-en" data-lang="en"
-    class="relative w-20 h-10 flex items-center justify-center transition-all duration-300">
-    <img src="https://flagcdn.com/w80/gb.png" alt="ENG"
-      class="absolute inset-0 w-full h-full object-cover z-0 transition-all duration-300 opacity-40 brightness-75" />
-    <span class="relative z-10 text-gray-900 font-semibold text-sm hidden">ENG</span>
-  </button>
-</div>
-
-      <!-- E-Ödeme Butonu -->
-      <a href="https://tahsilat.saltcam.com/"
-         class="hidden md:flex items-center gap-2 bg-transparent text-black px-4 py-2 rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
-        <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-        E-Ödeme
-      </a>
-
-      <!-- Hamburger Menü -->
-      <div class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 cursor-pointer">
-        <i class="ri-menu-line ri-lg"></i>
-      </div>
-    </div>
-    
-  </div>
-
-</header>
-<div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6">
-  <nav class="flex flex-col space-y-6 py-8">
-    <a href="#hero" class="text-gray-900 font-medium hover:text-primary transition-colors">Anasayfa</a>
-    <a href="#featured-products" class="text-gray-500 font-medium hover:text-primary transition-colors">Ürünlerimiz</a>
-    <a href="#about" class="text-gray-500 font-medium hover:text-primary transition-colors">Neden Biz?</a>
-    <a href="#catalogue" class="text-gray-500 font-medium hover:text-primary transition-colors">Katalog</a>
-    <a href="certs.html" class="text-gray-500 font-medium hover:text-primary transition-colors">Sertifikalar</a>
-    <a href="contact.html" class="text-gray-500 font-medium hover:text-primary transition-colors">İletişim</a>
-  </nav>
-
-  <!-- Mobil menüde gösterilecek E-Ödeme bağlantısı -->
-  <a href="https://tahsilat.saltcam.com/"
-     class="flex items-center justify-center gap-2 bg-gray-100 text-black px-4 py-3 rounded-button font-medium hover:bg-gray-200 transition-colors whitespace-nowrap mt-6">
-    <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
-    E-Ödeme
-  </a>
-</div>
-<header class="mb-10 pt-32 scale-in">
-    <h1 class="text-3xl font-bold text-center text-primary mb-2">Company Certificates</h1>
-    <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
-</header>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Certificate Card 1 -->
-
-
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">Alüminyum profil teknil bilgi föyü</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-white rounded-lg overflow-hidden mb-6 relative group">
-<div class="absolute inset-3 border-8 border-primary/10 rounded-lg"></div>
-<div class="absolute inset-[14px] border border-primary/20 rounded-md"></div>
-<div class="absolute inset-0 shadow-[0_0_15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-shadow duration-300"></div>
-<img src="certs_img/Teknik_bilgi.png" alt="Teknik_bilgi" class="w-full h-full object-cover object-top">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/Alüminyum profil teknil bilgi föyü_1.pdf', 'Alüminyum Profil Teknik Bilgi Föyü')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/Alüminyum profil teknil bilgi föyü_1.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 2 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">Profil Malzeme Güvenlik Bilgi Formu</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/Malzeme_guvenlik.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/Profil Malzeme Güvenlik Bilgi Formu.pdf', 'Alüminyum Profil Teknik Bilgi Föyü')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/Profil Malzeme Güvenlik Bilgi Formu.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 3 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">Salt Cam TSE K 441 BELGESİ</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSEK-BEELGE.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/Salt Cam TSE K 441 BELGESİ.pdf', 'Salt Cam TSE K 441 BELGESİ')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/Salt Cam TSE K 441 BELGESİ.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 4 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37682</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37682.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37682-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37682')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37682-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 5 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37707</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37707.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37707-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37707')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37707-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 6 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37719</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37719.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37719-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37719')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37719-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-
-<!-- Certificate Card 7 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37778</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-white rounded-lg overflow-hidden mb-6 relative group">
-<div class="absolute inset-3 border-8 border-primary/10 rounded-lg"></div>
-<div class="absolute inset-[14px] border border-primary/20 rounded-md"></div>
-<div class="absolute inset-0 shadow-[0_0_15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-shadow duration-300"></div>
-<img src="certs_img/TSE-37778.png" alt="Teknik_bilgi" class="w-full h-full object-cover object-top">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37778-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37778')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37778-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 8 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37804</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37804.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37804-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37804')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37804-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 9 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37890</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37890.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37890-1-2024-356380.pdff', 'TSE K 441 RAPOR SONUCU-37890')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37890-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 10 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37957</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37957.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37957-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37957')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37957-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 11 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-37982</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-37982.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37982-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37982')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="certs/TSE K 441 RAPOR SONUCU-37982-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-<!-- Certificate Card 12 -->
-<div class="bg-white rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
-<div class="p-6 bg-gradient-to-r from-primary/10 to-secondary/30 border-b border-gray-200">
-<h3 class="text-lg font-semibold text-primary text-center">TSE K 441 RAPOR SONUCU-38041</h3>
-</div>
-<div class="p-6">
-<div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
-<img src="certs_img/TSE-38041.png">
-</div>
-<div class="p-6 flex flex-col gap-3">
-      <button onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-38041-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-38041')" class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-eye-line"></i> <span>View Certificate</span>
-      </button>
-      <a href="TSE K 441 RAPOR SONUCU-38041-1-2024-356380.pdf" download class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
-        <i class="ri-download-line"></i> <span>Download Certificate</span>
-      </a>
-    </div>
-</div>
-</div>
-</div>
-</div>
-<!-- Certificate Preview Modal -->
-<div id="certificateModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center fade-in">
-<div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col scale-in">
-<div class="p-4 bg-primary text-white flex justify-between items-center">
-<h3 class="text-lg font-medium" id="modalTitle">Certificate Preview</h3>
-<button id="closeModal" class="text-white hover:text-gray-200">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-close-line ri-lg"></i>
-</div>
-</button>
-</div>
-<div class="p-6 flex-1 overflow-auto">
-<div class="aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-4">
-<img id="modalImage" src="" alt="Certificate Preview" class="w-full h-full object-contain">
-</div>
-<div class="text-sm text-gray-600 mb-4" id="modalDetails">
-<!-- Certificate details will be inserted here -->
-</div>
-</div>
-<div class="p-4 bg-gray-50 border-t border-gray-200 flex justify-end gap-3">
-<button id="modalDownload" class="btn-download bg-white text-primary border border-primary px-4 py-2 rounded-button text-sm flex items-center justify-center gap-1 whitespace-nowrap">
-<div class="w-4 h-4 flex items-center justify-center">
-<i class="ri-download-line"></i>
-</div>
-<span>Download</span>
-</button>
-<button id="modalClose" class="bg-primary text-white px-4 py-2 rounded-button text-sm whitespace-nowrap">Close</button>
-</div>
-</div>
-</div>
-
-
- <footer class="bg-sky-100 text-gray-800 pt-16 pb-8 animate-fade-in-up motion-safe:animate-fade-in-up">
-      <div class="container mx-auto px-4">
-
-        <!-- Grid: 3 Eşit Sütun -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-
-          <!-- Company Info -->
-          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-100">
-            <a href="/elitProfil" class="inline-block mb-4 transform hover:scale-105 transition-transform duration-300">
-              <img src="logo.png" alt="Logo" class="h-20 w-auto">
-            </a>
-            <p class="text-gray-600 mb-6 max-w-xs">2005’ten bu yana yenilikçi endüstriyel çözümler sunuyoruz. Kalite ve
-              müşteri memnuniyetinde mükemmellik hedefimizdir.</p>
-            <div class="flex space-x-4">
-              <a href="https://www.facebook.com/share/14ynVQQjLMV/?mibextid=wwXIfr"
-                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
-                <i class="ri-facebook-fill text-xl"></i>
-              </a>
-              <a href="https://www.instagram.com/saltcam/?hl=en"
-                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
-                <i class="ri-instagram-line text-xl"></i>
-
-              </a>
-              <a href="https://www.youtube.com/@saltcamkurumsal"
-                class="w-10 h-10 flex items-center justify-center bg-white text-blue-600 rounded-full shadow hover:bg-blue-200 hover:scale-110 transition-all duration-300">
-                <i class="ri-youtube-fill text-xl"></i>
-              </a>
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">Alüminyum profil teknil bilgi föyü</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-white rounded-lg overflow-hidden mb-6 relative group">
+            <div class="absolute inset-3 border-8 border-primary/40 rounded-lg"></div>
+            <div class="absolute inset-[14px] border border-primary/20 rounded-md"></div>
+            <div
+              class="absolute inset-0 shadow-[0_0_15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-shadow duration-300">
             </div>
+            <img src="certs_img/Teknik_bilgi.png" alt="Teknik_bilgi" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/Alüminyum profil teknil bilgi föyü_1.pdf', 'Alüminyum Profil Teknik Bilgi Föyü')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/Alüminyum profil teknil bilgi föyü_1.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 2 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">Profil Malzeme Güvenlik Bilgi Formu</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/Malzeme_guvenlik.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/Profil Malzeme Güvenlik Bilgi Formu.pdf', 'Alüminyum Profil Teknik Bilgi Föyü')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/Profil Malzeme Güvenlik Bilgi Formu.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 3 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">Salt Cam TSE K 441 BELGESİ</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSEK-BEELGE.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button onclick="openCertificateModal('certs/Salt Cam TSE K 441 BELGESİ.pdf', 'Salt Cam TSE K 441 BELGESİ')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/Salt Cam TSE K 441 BELGESİ.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 4 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37682</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37682.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37682-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37682')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37682-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 5 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37707</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37707.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37707-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37707')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37707-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 6 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37719</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37719.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37719-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37719')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37719-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificate Card 7 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37778</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-white rounded-lg overflow-hidden mb-6 relative group">
+            <div class="absolute inset-3 border-8 border-primary/10 rounded-lg"></div>
+            <div class="absolute inset-[14px] border border-primary/20 rounded-md"></div>
+            <div
+              class="absolute inset-0 shadow-[0_0_15px_rgba(0,0,0,0.1)] group-hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-shadow duration-300">
+            </div>
+            <img src="certs_img/TSE-37778.png" alt="Teknik_bilgi" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37778-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37778')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37778-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 8 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37804</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37804.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37804-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37804')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37804-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 9 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37890</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37890.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37890-1-2024-356380.pdff', 'TSE K 441 RAPOR SONUCU-37890')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37890-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 10 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37957</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37957.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37957-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37957')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37957-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 11 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-37982</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-37982.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-37982-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-37982')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="certs/TSE K 441 RAPOR SONUCU-37982-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Certificate Card 12 -->
+      <div
+        class="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg shadow-lg overflow-hidden scale-in hover:shadow-xl transition-shadow duration-300">
+
+        <div class="p-6 bg-gradient-to-r from-primary/40 to-secondary/30 border-b border-gray-200">
+          <h3 class="text-lg font-semibold text-white text-center">TSE K 441 RAPOR SONUCU-38041</h3>
+        </div>
+        <div class="p-6">
+          <div class="certificate-thumbnail aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-6">
+            <img src="certs_img/TSE-38041.png">
+          </div>
+          <div class="p-6 flex flex-col gap-3">
+            <button
+              onclick="openCertificateModal('certs/TSE K 441 RAPOR SONUCU-38041-1-2024-356380.pdf', 'TSE K 441 RAPOR SONUCU-38041')"
+              class="btn-view bg-primary text-white px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-eye-line"></i> <span>View Certificate</span>
+            </button>
+            <a href="TSE K 441 RAPOR SONUCU-38041-1-2024-356380.pdf" download
+              class="btn-download bg-white text-primary border border-primary px-6 py-3 rounded-button text-sm flex items-center justify-center gap-2">
+              <i class="ri-download-line"></i> <span>Download Certificate</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Certificate Preview Modal -->
+  <div id="certificateModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center fade-in">
+    <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col scale-in">
+      <div class="p-4 bg-primary text-white flex justify-between items-center">
+        <h3 class="text-lg font-medium" id="modalTitle">Certificate Preview</h3>
+        <button id="closeModal" class="text-white hover:text-gray-200">
+          <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-close-line ri-lg"></i>
+          </div>
+        </button>
+      </div>
+      <div class="p-6 flex-1 overflow-auto">
+        <div class="aspect-[1.414/1] bg-gray-100 rounded-lg overflow-hidden mb-4">
+          <img id="modalImage" src="" alt="Certificate Preview" class="w-full h-full object-contain">
+        </div>
+        <div class="text-sm text-gray-600 mb-4" id="modalDetails">
+          <!-- Certificate details will be inserted here -->
+        </div>
+      </div>
+      <div class="p-4 bg-gray-50 border-t border-gray-200 flex justify-end gap-3">
+        <button id="modalDownload"
+          class="btn-download bg-white text-primary border border-primary px-4 py-2 rounded-button text-sm flex items-center justify-center gap-1 whitespace-nowrap">
+          <div class="w-4 h-4 flex items-center justify-center">
+            <i class="ri-download-line"></i>
+          </div>
+          <span>Download</span>
+        </button>
+        <button id="modalClose"
+          class="bg-primary text-white px-4 py-2 rounded-button text-sm whitespace-nowrap">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 animate-fade-in-up motion-safe:animate-fade-in-up">
+  <div class="container mx-auto px-4">
+
+    <!-- Grid: Mobile = 1 col, Tablet = 1 col, Desktop = 3 col -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12 text-center lg:text-left">
+
+      <!-- Company Info -->
+      <div class="flex flex-col items-center lg:items-start animate-fade-in-up delay-100">
+        <a href="/elitProfil" class="inline-block mb-4 transform hover:scale-105 transition-transform duration-300">
+          <img src="logo.png" alt="Logo" class="h-20 w-auto">
+        </a>
+        <p class="text-gray-400 mb-6 max-w-xs lg:max-w-sm">
+          2005’ten bu yana yenilikçi endüstriyel çözümler sunuyoruz. Kalite ve müşteri memnuniyetinde mükemmellik hedefimizdir.
+        </p>
+
+        <div class="flex space-x-4 justify-center lg:justify-start">
+          <a href="https://www.facebook.com/share/14ynVQQjLMV/?mibextid=wwXIfr"
+            class="w-10 h-10 flex items-center justify-center bg-gray-800 text-blue-600 rounded-full shadow hover:bg-blue-600 hover:text-gray-900 hover:scale-110 transition-all duration-300">
+            <i class="ri-facebook-fill text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com/saltcam/?hl=en"
+            class="w-10 h-10 flex items-center justify-center bg-gray-800 text-blue-600 rounded-full shadow hover:bg-blue-600 hover:text-gray-900 hover:scale-110 transition-all duration-300">
+            <i class="ri-instagram-line text-xl"></i>
+          </a>
+          <a href="https://www.youtube.com/@saltcamkurumsal"
+            class="w-10 h-10 flex items-center justify-center bg-gray-800 text-blue-600 rounded-full shadow hover:bg-blue-600 hover:text-gray-900 hover:scale-110 transition-all duration-300">
+            <i class="ri-youtube-fill text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col items-center lg:items-start animate-fade-in-up delay-200">
+        <h3 class="text-lg font-semibold mb-6 flex items-center gap-2 text-blue-600">
+          <i class="ri-links-line"></i> Hızlı Linkler
+        </h3>
+        <ul class="space-y-3">
+          <li>
+            <a href="/elitProfil/#hero"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-home-line mr-2"></i><span>Anasayfa</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/elitProfil/#product"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-box-3-line mr-2"></i><span>Ürünlerimiz</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/elitProfil/#about"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-information-line mr-2"></i><span>Neden Biz?</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/elitProfil/#catalogue"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-booklet-line mr-2"></i><span>Katalog</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="certs.html"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-award-line mr-2"></i><span>Sertifikalar</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html"
+              class="group relative flex items-center justify-center lg:justify-start text-gray-400 hover:text-blue-600 transition-colors">
+              <i class="ri-phone-line mr-2"></i><span>İletişim</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="animate-fade-in-up delay-300 text-center lg:text-left">
+        <h3 class="text-lg font-semibold mb-6 flex items-center gap-2 justify-center lg:justify-start text-blue-600">
+          <i class="ri-contacts-line"></i> İletişim
+        </h3>
+
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 items-center lg:items-start">
+
+          <!-- Genel Merkez -->
+          <div class="space-y-4 text-gray-400">
+            <li class="flex items-start justify-center lg:justify-start">
+              <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
+              <span>
+                <strong>Genel Merkez</strong><br>
+                Hüseyin Okan Merzeci Mh.<br>
+                Akbelen Bulvarı No:177/A<br>
+                33090, Toroslar, Mersin, Türkiye
+              </span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start">
+              <i class="ri-phone-line mr-3 text-blue-600"></i>
+              <span>+90 (324) 324 3939</span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start">
+              <i class="ri-mail-line mr-3 text-blue-600"></i>
+              <span>saltcam@saltcam.com</span>
+            </li>
           </div>
 
-          <!-- Quick Links -->
-          <div class="flex flex-col items-center md:items-start text-center md:text-left animate-fade-in-up delay-200">
-            <h3 class="text-lg font-semibold mb-6 flex items-center gap-2">
-              <i class="ri-links-line text-blue-600"></i> Hızlı Linkler
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="/elitProfil/#hero"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-home-line mr-2"></i>Anasayfa
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-              <li>
-                <a href="/elitProfil/#product"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-box-3-line mr-2"></i>Ürünlerimiz
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-              <li>
-                <a href="/elitProfil/#about"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-information-line mr-2"></i>Neden Biz?
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-              <li>
-                <a href="/elitProfil/#catalogue"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-booklet-line mr-2"></i>Katalog
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-              <li>
-                <a href="certs.html"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-award-line mr-2"></i>Sertifikalar
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-              <li>
-                <a href="contact.html"
-                  class="group relative flex items-center text-gray-600 hover:text-blue-700 transition-colors">
-                  <i class="ri-phone-line mr-2"></i>İletişim
-                  <span
-                    class="absolute left-6 bottom-0 w-0 h-[2px] bg-blue-600 transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
-                </a>
-              </li>
-            </ul>
+          <!-- Fabrika -->
+          <div class="space-y-4 text-gray-400">
+            <li class="flex items-start justify-center lg:justify-start">
+              <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
+              <span>
+                <strong>Fabrika</strong><br>
+                Mersin Organize Sanayi Bölgesi<br>
+                Atatürk Bulvarı No:8/A<br>
+                33400, Tarsus, Mersin, Türkiye
+              </span>
+            </li>
+            <li class="flex items-center justify-center lg:justify-start">
+              <i class="ri-phone-line mr-3 text-blue-600"></i>
+              <span>+90 (324) 676 45 10</span>
+            </li>
           </div>
 
+        </div>
+      </div>
 
-          <!-- Contact Info -->
-      <div class="animate-fade-in-up delay-300">
-  <!-- Ortak Başlık -->
-  <h3 class="text-lg font-semibold mb-6 flex items-center gap-2 justify-center md:justify-start text-center md:text-left">
-    <i class="ri-contacts-line text-blue-600"></i> İletişim
-  </h3>
-
-  <!-- Adresler -->
-  <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-center md:items-start text-center md:text-left">
-    
-    <!-- Genel Merkez -->
-    <div>
-      <ul class="space-y-4 text-gray-600">
-        <li class="flex items-start justify-center md:justify-start">
-          <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
-          <span>
-            <strong>Genel Merkez</strong><br>
-            Hüseyin Okan Merzeci Mh.<br>
-            Akbelen Bulvarı No:177/A<br>
-            33090, Toroslar, Mersin, Türkiye
-          </span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-phone-line mr-3 text-blue-600"></i>
-          <span>+90 (324) 324 3939</span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-mail-line mr-3 text-blue-600"></i>
-          <span>saltcam@saltcam.com</span>
-        </li>
-      </ul>
     </div>
 
-    <!-- Fabrika -->
-    <div>
-      <ul class="space-y-4 text-gray-600">
-        <li class="flex items-start justify-center md:justify-start">
-          <i class="ri-map-pin-line mr-3 mt-1 text-blue-600"></i>
-          <span>
-            <strong>Fabrika</strong><br>
-            Mersin Organize Sanayi Bölgesi<br>
-            Atatürk Bulvarı No:8/A<br>
-            33400, Tarsus, Mersin, Türkiye
-          </span>
-        </li>
-        <li class="flex items-center justify-center md:justify-start">
-          <i class="ri-phone-line mr-3 text-blue-600"></i>
-          <span>+90 (324) 676 45 10</span>
-        </li>
-      </ul>
+    <!-- Footer Bottom -->
+    <div class="pt-8 border-t border-gray-700 flex justify-center items-center animate-fade-in-up delay-500">
+      <p class="text-gray-500 text-center">© 2025 Salt Cam. Tüm Hakları Saklıdır.</p>
     </div>
 
   </div>
-</div>
+</footer>
 
-          
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="pt-8 border-t border-gray-300 flex justify-center items-center animate-fade-in-up delay-500">
-          <p class="text-gray-500 text-center">© 2025 Salt Cam. Tüm Hakları Saklıdır.</p>
-        </div>
-      </div>
-    </footer>
-
-
-<script src="certs.js"></script>
+  <script src="certs.js"></script>
 
 </body>
+
 </html>
-
-
-
