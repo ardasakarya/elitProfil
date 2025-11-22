@@ -27,18 +27,18 @@ document.addEventListener("headerLoaded", () => {
 
         header.querySelectorAll('nav a').forEach(a => {
             a.classList.remove('text-white', 'text-gray-800');
-            a.classList.add('text-black'); // ← SİYAH YAZI
+            a.classList.add('text-white'); // ← SİYAH YAZI
         });
 
         menuButton.classList.remove('text-white', 'text-gray-800');
-        menuButton.classList.add('text-black'); // ← Hamburger simgesi siyah olsun
+        menuButton.classList.add('text-white'); // ← Hamburger simgesi siyah olsun
 
     } else {
         header.classList.remove('bg-white/20', 'backdrop-blur-md');
         header.classList.add('bg-transparent');
 
         header.querySelectorAll('nav a').forEach(a => {
-            a.classList.remove('text-black');
+            a.classList.remove('text-white');
             a.classList.add('text-white'); // ← Eski haline geri
         });
 
