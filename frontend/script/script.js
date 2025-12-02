@@ -1,4 +1,4 @@
-fetch("components/header/header.html")
+fetch("frontend/components/header/header.html")
   .then(r => r.text())
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
@@ -406,7 +406,7 @@ if (footerNavLinks[5]) footerNavLinks[5].textContent = t.contact;
         });
     });
 
-  fetch("components/footer/footer.html")
+  fetch("frontend/components/footer/footer.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
