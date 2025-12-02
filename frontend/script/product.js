@@ -120,7 +120,7 @@ const productId = params.get('id');
 
 // productData içindeki imgSrc ve gallery pathlerini düzenliyoruz
 function fixPath(path) {
-    return `./frontend/${path}`; // tüm dosya yollarını frontend klasörü altında kabul ediyoruz
+    return `/frontend/${path}`; // tüm dosya yollarını frontend klasörü altında kabul ediyoruz
 }
 
 if (productId && productData[productId]) {
