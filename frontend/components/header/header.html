@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SALT CAM</title>
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- HEADER JS -->
+  
+
+</head>
+<body class="bg-gray-100">
+
+
 <!-- HEADER START -->
 <header id="header"
         class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-transparent">
@@ -7,16 +24,16 @@
 
     <!-- Logo -->
     <a href="/elitProfil" class="flex-shrink-0">
-      <img src="logo.png" class="h-12 w-auto"/>
+      <img src="/frontend/img/logo.png" class="h-12 w-auto"/>
     </a>
 
     <!-- Desktop Menu -->
     <nav class="hidden lg:flex items-center gap-10 text-white flex-1 justify-center">
 
-      <a href="#hero" class="hover:text-gray-300 transition">Anasayfa</a>
-      <a href="#featured-products" class="hover:text-gray-300 transition">Ürünlerimiz</a>
-      <a href="#about" class="hover:text-gray-300 transition">Neden Biz?</a>
-      <a href="#catalogue" class="hover:text-gray-300 transition">Katalog</a>
+      <a href="index.html" class="hover:text-gray-300 transition">Anasayfa</a>
+      <a href="index.html#featured-products" class="hover:text-gray-300 transition">Ürünlerimiz</a>
+      <a href="index.html#about" class="hover:text-gray-300 transition">Neden Biz?</a>
+      <a href="index.html#catalogue" class="hover:text-gray-300 transition">Katalog</a>
       <a href="certs.html" class="hover:text-gray-300 transition">Sertifikalar</a>
       <a href="contact.html" class="hover:text-gray-300 transition">İletişim</a>
 
@@ -24,10 +41,13 @@
 
     <!-- E-Ödeme DESKTOP -->
     <a href="https://tahsilat.saltcam.com/"
-       class="hidden lg:flex items-center gap-2 bg-white/10 backdrop-blur-md 
-              text-white px-4 py-2 rounded-full border border-white/20 
+       class="hidden lg:flex items-center justify-center 
+              gap-1 bg-white/10 backdrop-blur-md 
+              text-white 
+              w-24 h-10 px-4 py-2 text-xs 
+              rounded-full border border-white/20 
               font-medium hover:bg-white/20 transition-colors whitespace-nowrap">
-      <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-6 h-6 object-contain">
+      <img src="/frontend/img/salt_tahsilat.avif" alt="E-Ödeme" class="w-5 h-5 object-contain">
       E-Ödeme
     </a>
 
@@ -50,13 +70,13 @@
 
         <div id="langKnob"
               class="w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300">
-          <img id="langFlag" src="tr.webp" class="w-8 h-8 rounded-full"/>
+          <img id="langFlag" src="/frontend/img/tr.webp" class="w-8 h-8 rounded-full"/>
         </div>
 
       </button>
     </div>
 
-    <!-- Mobile Button ALWAYS visible until lg -->
+    <!-- Mobile Button -->
     <button id="mobile-menu-button"
             class="lg:hidden text-white text-4xl leading-none">
       ☰
@@ -80,19 +100,22 @@
     ✕
   </button>
 
-  <a href="#hero" class="mobile-link hover:text-gray-300 transition">Anasayfa</a>
-  <a href="#featured-products" class="mobile-link hover:text-gray-300 transition">Ürünlerimiz</a>
-  <a href="#about" class="mobile-link hover:text-gray-300 transition">Neden Biz?</a>
-  <a href="#catalogue" class="mobile-link hover:text-gray-300 transition">Katalog</a>
+  <a href="index.html" class="mobile-link hover:text-gray-300 transition">Anasayfa</a>
+  <a href="index.html#featured-products" class="mobile-link hover:text-gray-300 transition">Ürünlerimiz</a>
+  <a href="index.html#about" class="mobile-link hover:text-gray-300 transition">Neden Biz?</a>
+  <a href="index.html#catalogue" class="mobile-link hover:text-gray-300 transition">Katalog</a>
   <a href="certs.html" class="mobile-link hover:text-gray-300 transition">Sertifikalar</a>
   <a href="contact.html" class="mobile-link hover:text-gray-300 transition">İletişim</a>
 
   <!-- E-Ödeme MOBILE -->
   <a href="https://tahsilat.saltcam.com/"
-     class="flex items-center gap-3 bg-white/10 backdrop-blur-md 
-            text-white px-6 py-3 rounded-full border border-white/20
-            text-xl hover:bg-white/20 transition">
-    <img src="salt_tahsilat.avif" alt="E-Ödeme" class="w-8 h-8 object-contain">
+     class="flex items-center justify-center 
+            gap-1 bg-white/10 backdrop-blur-md 
+            text-white 
+            w-28 h-12 px-4 py-2 text-xs 
+            rounded-full border border-white/20 
+            font-medium hover:bg-white/20 transition-colors whitespace-nowrap">
+    <img src="/frontend/img/salt_tahsilat.avif" alt="E-Ödeme" class="w-5 h-5 object-contain">
     E-Ödeme
   </a>
 
@@ -115,10 +138,15 @@
 
       <div id="langKnobMobile"
            class="w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center transition-all duration-300">
-        <img id="langFlagMobile" src="tr.webp" class="w-8 h-8 rounded-full"/>
+        <img id="langFlagMobile" src="/frontend/img/tr.webp" class="w-8 h-8 rounded-full"/>
       </div>
 
     </button>
   </div>
 
 </nav>
+
+
+<script defer src="header.js"></script>
+</body>
+</html>

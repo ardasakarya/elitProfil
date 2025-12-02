@@ -1,15 +1,16 @@
 
 // HEADER LOAD
-fetch("header.html")
+fetch("components/header/header.html")
   .then(r => r.text())
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
 
     const s = document.createElement("script");
-    s.src = "header.js";
+    s.src = "/frontend/components/header/header.js";
     s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
     document.body.appendChild(s);
   });
+
 
 
 
@@ -174,3 +175,8 @@ viewButtons.forEach(button => {
 
 });
 
+ fetch("components/footer/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });

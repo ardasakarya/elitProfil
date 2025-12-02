@@ -1,10 +1,10 @@
-fetch("header.html")
+fetch("components/header/header.html")
   .then(r => r.text())
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
 
     const s = document.createElement("script");
-    s.src = "header.js";
+    s.src = "/frontend/components/header/header.js";
     s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
     document.body.appendChild(s);
   });
@@ -404,4 +404,10 @@ if (footerNavLinks[5]) footerNavLinks[5].textContent = t.contact;
             const productId = button.getAttribute('data-id');
             window.location.href = `product.html?id=${productId}`;
         });
+    });
+
+  fetch("components/footer/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
     });
