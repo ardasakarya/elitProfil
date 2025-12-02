@@ -118,13 +118,18 @@ const productData = {
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 
+// productData içindeki imgSrc ve gallery pathlerini düzenliyoruz
+function fixPath(path) {
+    return `./frontend/${path}`; // tüm dosya yollarını frontend klasörü altında kabul ediyoruz
+}
+
 if (productId && productData[productId]) {
 
     const product = productData[productId];
 
     document.getElementById("productTitle").textContent = product.title;
     document.getElementById("productDescription").textContent = product.description;
-    document.getElementById("productImage").src = product.imgSrc;
+    document.getElementById("productImage").src = fixPath(product.imgSrc);
 
     const thumbnailContainer = document.getElementById("thumbnailContainer");
     thumbnailContainer.innerHTML = "";
@@ -132,38 +137,32 @@ if (productId && productData[productId]) {
     const thumbs = product.gallery;
 
     // --- SCROLL AÇILMA KURALI ---
-if (window.innerWidth > 768) {
-
-    if (thumbs.length <= 3) {
-        // Scroll gerekmez
+    if (window.innerWidth > 768) {
+        if (thumbs.length <= 3) {
+            thumbnailContainer.style.height = "auto";
+            thumbnailContainer.style.overflowY = "hidden";
+        } else {
+            thumbnailContainer.style.height = "300px"; 
+            thumbnailContainer.style.overflowY = "auto";
+        }
+    } else {
         thumbnailContainer.style.height = "auto";
         thumbnailContainer.style.overflowY = "hidden";
-    } else {
-        // Scroll aktif – diğer fotoğraflar aşağıya saklanır
-        thumbnailContainer.style.height = "300px"; 
-        thumbnailContainer.style.overflowY = "auto";
+        thumbnailContainer.style.overflowX = "auto";
     }
-
-// Mobil için: yatay scroll, dikey scroll kapalı
-} else {
-    thumbnailContainer.style.height = "auto";
-    thumbnailContainer.style.overflowY = "hidden";
-    thumbnailContainer.style.overflowX = "auto";
-}
 
     // Thumbnail oluştur
     thumbs.forEach(img => {
         const th = document.createElement("img");
-        th.src = img;
+        th.src = fixPath(img);  // path düzenleme burada da uygulanıyor
         th.className = "thumb-img";
 
         th.onclick = () => {
-            document.getElementById("productImage").src = img;
+            document.getElementById("productImage").src = fixPath(img);
         };
 
         thumbnailContainer.appendChild(th);
     });
-
 
     // TABLOYU DOLDUR
     const tbody = document.getElementById("standardTableBody");
