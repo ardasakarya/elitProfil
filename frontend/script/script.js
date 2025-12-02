@@ -1,4 +1,4 @@
-fetch("frontend/components/header/header.html")
+fetch("/frontend/components/header/header.html")
   .then(r => r.text())
   .then(html => {
     document.getElementById("header-container").innerHTML = html;
