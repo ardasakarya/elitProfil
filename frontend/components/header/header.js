@@ -95,12 +95,12 @@ document.addEventListener("headerLoaded", () => {
 
         if (isTR) {
             knob.style.transform = `translateX(${moveX}px)`;
-            flag.src = "img/uk.png";
+            flag.src = "/elitProfil/frontend/img/uk.png";
             leftText.style.opacity = "1";
             rightText.style.opacity = "0";
         } else {
             knob.style.transform = `translateX(0px)`;
-            flag.src = "img/tr.webp";
+            flag.src = "/elitProfil/frontend/img/tr.webp";
             leftText.style.opacity = "0";
             rightText.style.opacity = "1";
         }
