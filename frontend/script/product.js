@@ -10,7 +10,6 @@ fetch("frontend/components/header/header.html")
   });
 
 
-
 const productData = {
     standart: {
         title: "Standart Profil",
