@@ -1,12 +1,11 @@
-fetch("./frontend/components/header/header.html")
+fetch("/elitProfil/frontend/components/header/header.html")
   .then(r => r.text())
   .then(html => {
-    document.getElementById("header-container").innerHTML = html;
+      document.getElementById("header-container").innerHTML = html;
 
-    const s = document.createElement("script");
-    s.src = "./frontend/components/header/header.js";
-    s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
-    document.body.appendChild(s);
+      const s = document.createElement("script");
+      s.src = "/elitProfil/frontend/components/header/header.js";
+      document.body.appendChild(s);
   });
 
 
