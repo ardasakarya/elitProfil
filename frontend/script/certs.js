@@ -6,7 +6,7 @@ fetch("components/header/header.html")
     document.getElementById("header-container").innerHTML = html;
 
     const s = document.createElement("script");
-    s.src = "/frontend/components/header/header.js";
+    s.src = "components/header/header.js";
     s.onload = () => document.dispatchEvent(new Event("headerLoaded"));
     document.body.appendChild(s);
   });
@@ -28,59 +28,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// --- VIEW BUTTON ---
-const viewButtons = document.querySelectorAll('.btn-view');
+  // --- VIEW BUTTON ---
+  const viewButtons = document.querySelectorAll('.btn-view');
 
-viewButtons.forEach(button => {
-  button.addEventListener('click', function () {
+  viewButtons.forEach(button => {
+    button.addEventListener('click', function () {
 
-    let certName = "";
-    let issueDate = "";
-    let expiryDate = "";
-    let imgSrc = "";
+      let certName = "";
+      let issueDate = "";
+      let expiryDate = "";
+      let imgSrc = "";
 
-    // CARD STRUCTURE
-    const card = this.closest('.bg-white');
-    if (card) {
-      certName = card.querySelector('h3').textContent;
-      imgSrc = card.querySelector('img').src;
+      // CARD STRUCTURE
+      const card = this.closest('.bg-white');
+      if (card) {
+        certName = card.querySelector('h3').textContent;
+        imgSrc = card.querySelector('img').src;
 
-      issueDate = 'January 15, 2023';
-      expiryDate = 'January 14, 2026';
-    }
+        issueDate = 'January 15, 2023';
+        expiryDate = 'January 14, 2026';
+      }
 
-    // TABLE STRUCTURE
-    const row = this.closest('tr');
-    if (row) {
-      certName = row.querySelector('td:first-child').textContent;
-      issueDate = row.querySelector('td:nth-child(2)').textContent;
-      expiryDate = row.querySelector('td:nth-child(3)').textContent;
-      imgSrc = row.querySelector('img').src;
-    }
+      // TABLE STRUCTURE
+      const row = this.closest('tr');
+      if (row) {
+        certName = row.querySelector('td:first-child').textContent;
+        issueDate = row.querySelector('td:nth-child(2)').textContent;
+        expiryDate = row.querySelector('td:nth-child(3)').textContent;
+        imgSrc = row.querySelector('img').src;
+      }
 
-    // ---------- PDF & IMAGE PREVIEW FIX ----------
-    modalTitle.textContent = certName;
+      // ---------- PDF & IMAGE PREVIEW FIX ----------
+      modalTitle.textContent = certName;
 
-    const file = this.getAttribute("data-cert");
+      const file = this.getAttribute("data-cert");
 
-    if (file && file.toLowerCase().endsWith(".pdf")) {
-      modalImage.style.display = "none";
-      modalDetails.innerHTML = `
+      if (file && file.toLowerCase().endsWith(".pdf")) {
+        modalImage.style.display = "none";
+        modalDetails.innerHTML = `
         <iframe src="${file}" class="w-full h-[70vh] rounded-lg border"></iframe>
       `;
-    } else {
-      modalImage.style.display = "block";
-      modalImage.src = imgSrc;
-      modalDetails.innerHTML = "";
-    }
-    // ----------------------------------------------
+      } else {
+        modalImage.style.display = "block";
+        modalImage.src = imgSrc;
+        modalDetails.innerHTML = "";
+      }
+      // ----------------------------------------------
 
-    // OPEN MODAL
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
+      // OPEN MODAL
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
 
 
 
@@ -175,8 +175,8 @@ viewButtons.forEach(button => {
 
 });
 
- fetch("components/footer/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
+fetch("components/footer/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
