@@ -196,6 +196,7 @@ if (productId && productData[productId]) {
     document.getElementById("productImage").src = "";
 }
 
+
   fetch("components/footer/footer.html")
     .then(response => response.text())
     .then(data => {
