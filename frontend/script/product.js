@@ -120,19 +120,22 @@ const productData = {
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 
-// productData içindeki imgSrc ve gallery pathlerini düzenliyoruz
+// GitHub Pages kök dizini için path düzeltme
+// Tüm kaynaklar /elitProfil/frontend/... şeklinde yüklenmek zorunda
 function fixPath(path) {
-    return `/frontend/${path}`; // tüm dosya yollarını frontend klasörü altında kabul ediyoruz
+    return `/elitProfil/frontend/${path}`;
 }
 
 if (productId && productData[productId]) {
 
     const product = productData[productId];
 
+    // Başlık, açıklama, ana görsel
     document.getElementById("productTitle").textContent = product.title;
     document.getElementById("productDescription").textContent = product.description;
     document.getElementById("productImage").src = fixPath(product.imgSrc);
 
+    // Thumbnail container
     const thumbnailContainer = document.getElementById("thumbnailContainer");
     thumbnailContainer.innerHTML = "";
 
@@ -144,7 +147,7 @@ if (productId && productData[productId]) {
             thumbnailContainer.style.height = "auto";
             thumbnailContainer.style.overflowY = "hidden";
         } else {
-            thumbnailContainer.style.height = "300px"; 
+            thumbnailContainer.style.height = "300px";
             thumbnailContainer.style.overflowY = "auto";
         }
     } else {
@@ -153,10 +156,10 @@ if (productId && productData[productId]) {
         thumbnailContainer.style.overflowX = "auto";
     }
 
-    // Thumbnail oluştur
+    // --- Thumbnail Oluştur ---
     thumbs.forEach(img => {
         const th = document.createElement("img");
-        th.src = fixPath(img);  // path düzenleme burada da uygulanıyor
+        th.src = fixPath(img);
         th.className = "thumb-img";
 
         th.onclick = () => {
@@ -166,7 +169,7 @@ if (productId && productData[productId]) {
         thumbnailContainer.appendChild(th);
     });
 
-    // TABLOYU DOLDUR
+    // --- TABLO DOLDURMA ---
     const tbody = document.getElementById("standardTableBody");
     tbody.innerHTML = "";
 
@@ -187,7 +190,10 @@ if (productId && productData[productId]) {
     }
 
 } else {
+    // Ürün bulunamadı fallback
     document.getElementById("productTitle").textContent = "Ürün Bulunamadı";
+    document.getElementById("productDescription").textContent = "";
+    document.getElementById("productImage").src = "";
 }
 
   fetch("components/footer/footer.html")
