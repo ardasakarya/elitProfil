@@ -399,13 +399,14 @@ if (footerNavLinks[5]) footerNavLinks[5].textContent = t.contact;
     }
 
     // --- Product Detail Buttons ---
-    const detayBtns = document.querySelectorAll('.detay-btn');
-    detayBtns.forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.getAttribute('data-id');
-            window.location.href = `product.html?id=${productId}`;
-        });
+const detayBtns = document.querySelectorAll('.detay-btn');
+
+detayBtns.forEach(button => {
+    button.addEventListener('click', () => {
+        const productId = button.getAttribute('data-id');
+        window.location.href = `/elitProfil/frontend/product.html?id=${productId}`;
     });
+});
 
   fetch("frontend/components/footer/footer.html")
     .then(response => response.text())
