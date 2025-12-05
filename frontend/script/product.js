@@ -117,33 +117,21 @@ const productData = {
 // ÜRÜN YÜKLEME SİSTEMİ
 // ------------------------------
 
-// -----------------------------
-// INDEX → PRODUCT YÖNLENDİRME KODU
-// (product-data sayfası olması fark etmez, istersen burada dursun demişsin)
-// -----------------------------
-document.querySelectorAll(".product-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const productId = card.getAttribute("data-id");
-
-        if (!productId) {
-            console.error("Ürün kartında data-id bulunamadı!");
-            return;
-        }
-
-        // GitHub Pages uyumlu yönlendirme
-        window.location.href = `/elitProfil/frontend/product.html?id=${productId}`;
-    });
-});
-
-// ------------------------------------------------------
-// BURADAN SONRASI SENİN ORİJİNAL ÜRÜN DETAY KODUN
-// ------------------------------------------------------
-
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
 // GitHub Pages için path düzeltme
 function fixPath(path) {
+
+    // Mevcut sayfanın tam URL yolunu al
+    const currentPath = window.location.pathname;
+
+    // Eğer şu anda /elitProfil/frontend/ içindeysek:
+    if (currentPath.includes("/elitProfil/frontend/")) {
+        return `/elitProfil/frontend/${path}`;
+    }
+
+    // Eğer root’dan açılıyorsa otomatik frontend'e yönlendir
     return `/elitProfil/frontend/${path}`;
 }
 
@@ -199,7 +187,6 @@ if (productId && productData[productId]) {
 
     const specs = product.specs;
 
-    // Her spec aynı uzunlukta olmalı
     const maxRows = specs[0]?.value?.length || 0;
 
     for (let i = 0; i < maxRows; i++) {
@@ -216,6 +203,7 @@ if (productId && productData[productId]) {
     }
 
 } else {
+
     // Ürün bulunamadı
     document.getElementById("productTitle").textContent = "Ürün Bulunamadı";
     document.getElementById("productDescription").textContent = "";
