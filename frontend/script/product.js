@@ -117,6 +117,28 @@ const productData = {
 // ÜRÜN YÜKLEME SİSTEMİ
 // ------------------------------
 
+// -----------------------------
+// INDEX → PRODUCT YÖNLENDİRME KODU
+// (product-data sayfası olması fark etmez, istersen burada dursun demişsin)
+// -----------------------------
+document.querySelectorAll(".product-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const productId = card.getAttribute("data-id");
+
+        if (!productId) {
+            console.error("Ürün kartında data-id bulunamadı!");
+            return;
+        }
+
+        // GitHub Pages uyumlu yönlendirme
+        window.location.href = `/elitProfil/frontend/product.html?id=${productId}`;
+    });
+});
+
+// ------------------------------------------------------
+// BURADAN SONRASI SENİN ORİJİNAL ÜRÜN DETAY KODUN
+// ------------------------------------------------------
+
 const params = new URLSearchParams(window.location.search);
 const productId = params.get("id");
 
