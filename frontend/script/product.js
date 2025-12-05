@@ -118,14 +118,14 @@ const productData = {
 // ------------------------------
 
 const params = new URLSearchParams(window.location.search);
-const productId = params.get('id');
+const productId = params.get("id");
 
-// GitHub Pages kök dizini için path düzeltme
-// Tüm kaynaklar /elitProfil/frontend/... şeklinde yüklenmek zorunda
+// GitHub Pages için path düzeltme
 function fixPath(path) {
     return `/elitProfil/frontend/${path}`;
 }
 
+// Ürün kontrolü
 if (productId && productData[productId]) {
 
     const product = productData[productId];
@@ -135,14 +135,16 @@ if (productId && productData[productId]) {
     document.getElementById("productDescription").textContent = product.description;
     document.getElementById("productImage").src = fixPath(product.imgSrc);
 
-    // Thumbnail container
+    // Thumbnail alanı
     const thumbnailContainer = document.getElementById("thumbnailContainer");
     thumbnailContainer.innerHTML = "";
 
     const thumbs = product.gallery;
 
-    // --- SCROLL AÇILMA KURALI ---
-    if (window.innerWidth > 768) {
+    // --- Scroll açılma kuralları ---
+    const isDesktop = window.innerWidth > 768;
+
+    if (isDesktop) {
         if (thumbs.length <= 3) {
             thumbnailContainer.style.height = "auto";
             thumbnailContainer.style.overflowY = "hidden";
@@ -156,11 +158,11 @@ if (productId && productData[productId]) {
         thumbnailContainer.style.overflowX = "auto";
     }
 
-    // --- Thumbnail Oluştur ---
+    // --- Thumbnail oluştur ---
     thumbs.forEach(img => {
         const th = document.createElement("img");
         th.src = fixPath(img);
-        th.className = "thumb-img";
+        th.className = "thumb-img cursor-pointer";
 
         th.onclick = () => {
             document.getElementById("productImage").src = fixPath(img);
@@ -169,19 +171,21 @@ if (productId && productData[productId]) {
         thumbnailContainer.appendChild(th);
     });
 
-    // --- TABLO DOLDURMA ---
+    // --- Tablo doldurma ---
     const tbody = document.getElementById("standardTableBody");
     tbody.innerHTML = "";
 
     const specs = product.specs;
-    const rowCount = specs[0].value.length;
 
-    for (let i = 0; i < rowCount; i++) {
+    // Her spec aynı uzunlukta olmalı
+    const maxRows = specs[0]?.value?.length || 0;
+
+    for (let i = 0; i < maxRows; i++) {
         const row = document.createElement("tr");
 
         specs.forEach(spec => {
             const cell = document.createElement("td");
-            cell.textContent = spec.value[i];
+            cell.textContent = spec.value[i] ?? "-";
             cell.className = "border px-4 py-2 text-center";
             row.appendChild(cell);
         });
@@ -190,10 +194,12 @@ if (productId && productData[productId]) {
     }
 
 } else {
-    // Ürün bulunamadı fallback
+    // Ürün bulunamadı
     document.getElementById("productTitle").textContent = "Ürün Bulunamadı";
     document.getElementById("productDescription").textContent = "";
     document.getElementById("productImage").src = "";
+    document.getElementById("thumbnailContainer").innerHTML = "";
+    document.getElementById("standardTableBody").innerHTML = "";
 }
 
 
