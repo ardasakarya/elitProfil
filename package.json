@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./frontend/style/input.css -o ./frontend/style/output.css",
+    "build": "tailwindcss -i ./frontend/style/input.css -o ./frontend/style/output.css --minify",
     "watch": "tailwindcss -i ./frontend/style/input.css -o ./frontend/style/output.css --watch",
     "optimize-images": "node optimize_images.js"
   },
