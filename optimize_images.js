@@ -1,64 +1,84 @@
+// optimize_images.js
+const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
-const sharp = require('sharp');
+const { promisify } = require('util');
 
-const rootDir = path.join(__dirname, 'frontend');
-const extensions = ['.png', '.jpg', '.jpeg'];
+const readdir = promisify(fs.readdir);
+const stat = promisify(fs.stat);
 
-// Helper to crawl directories
-function getFiles(dir) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  list.forEach(file => {
-    file = path.join(dir, file);
-    const stat = fs.statSync(file);
-    if (stat && stat.isDirectory()) {
-      results = results.concat(getFiles(file));
-    } else {
-      if (extensions.includes(path.extname(file).toLowerCase())) {
-        results.push(file);
-      }
-    }
-  });
-  return results;
+// İşlenecek klasörler ve boyutlandırma kuralları
+const processConfig = {
+  '`frontend/img`': { // Hero ve diğer genel görseller için
+    sizes: [640, 768, 1024, 1280, 1536, 1920],
+    quality: 80,
+  },
+  '`frontend/product_img`': { // Ürün ve katalog görselleri için
+    sizes: [400, 600, 800],
+    quality: 75,
+  },
+   '`frontend/img/logo.png`': { // Logo için (eğer SVG değilse)
+    sizes: [150, 300], // Normal ve 2x (retina) için
+    quality: 90,
+  }
+};
+
+async function getFiles(dir) {
+  const subdirs = await readdir(dir);
+  const files = await Promise.all(
+    subdirs.map(async (subdir) => {
+      const res = path.resolve(dir, subdir);
+      return (await stat(res)).isDirectory() ? getFiles(res) : res;
+    })
+  );
+  return files.flat().filter(file => /\.(jpe?g|png|webp)$/i.test(file));
 }
 
 async function optimizeImages() {
-  const files = getFiles(rootDir);
-  console.log(`Found ${files.length} images to optimize...`);
+  console.log('Görsel optimizasyonu başlıyor...');
 
-  for (const file of files) {
-    const ext = path.extname(file);
-    const fileName = path.basename(file, ext);
-    const dir = path.dirname(file);
-    const output = path.join(dir, `${fileName}.webp`);
-
-    // Skip if webp already exists and is newer? 
-    // For now, we overwrite or create.
-    
-    try {
-      console.log(`Processing: ${file}`);
-      
-      const image = sharp(file);
-      const metadata = await image.metadata();
-
-      let pipeline = image.webp({ quality: 80 }); // Good balance for WebP
-
-      // Resize if too large (e.g., > 1920px width)
-      if (metadata.width > 1920) {
-        console.log(`  Resizing from ${metadata.width}px to 1920px width`);
-        pipeline = pipeline.resize({ width: 1920 });
+  for (const [inputDir, config] of Object.entries(processConfig)) {
+      if (fs.lstatSync(inputDir).isFile()) { // Tek dosya ise (logo gibi)
+        await processFile(inputDir, path.dirname(inputDir), config);
+        continue;
       }
 
-      await pipeline.toFile(output);
-      console.log(`  Saved to: ${output}`);
-      
-    } catch (err) {
-      console.error(`  Error processing ${file}:`, err);
-    }
+      const files = await getFiles(inputDir);
+
+      for (const file of files) {
+        if (file.includes(path.sep + 'optimized' + path.sep)) continue; // Zaten optimize edilmişleri atla
+        await processFile(file, inputDir, config);
+      }
   }
-  
-  console.log('Optimization complete!');
+
+  console.log('Görsel optimizasyonu tamamlandı!');
+}
+
+async function processFile(file, baseInputDir, config) {
+    const { name, ext, dir } = path.parse(file);
+    const relativeDir = path.relative(baseInputDir, dir);
+    const outputDir = path.join(baseInputDir, 'optimized', relativeDir);
+
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    console.log(`-> İşleniyor: ${file}`);
+
+    for (const width of config.sizes) {
+      const outputFilename = `${name}-${width}w.webp`;
+      const outputPath = path.join(outputDir, outputFilename);
+
+      try {
+        await sharp(file)
+          .resize({ width })
+          .webp({ quality: config.quality })
+          .toFile(outputPath);
+        console.log(`   - Oluşturuldu: ${outputPath} (${width}px)`);
+      } catch (err) {
+        console.error(`Hata (${file}):`, err);
+      }
+    }
 }
 
 optimizeImages();
