@@ -1,0 +1,20 @@
+{
+  "name": "elitprofil",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:assets",
+    "build:css": "tailwindcss -i ./frontend/style/input.css -o ./frontend/style/output.css",
+    "build:assets": "node build.js",
+    "watch": "tailwindcss -i ./frontend/style/input.css -o ./frontend/style/output.css --watch",
+    "optimize-images": "node optimize_images.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "sharp": "^0.33.2"
+  }
+}
