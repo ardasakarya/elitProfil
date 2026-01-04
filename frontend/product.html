@@ -31,24 +31,11 @@
       </div>
 
       <!-- Sağ Taraf -->
-     <!-- Sağ Taraf -->
-<div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-start w-full">
-
-  <!-- Thumbnail Alanı -->
-  <div
-    id="thumbnailContainer"
-    class="
-      order-2 lg:order-1
-      flex flex-row lg:flex-col gap-3
-      overflow-x-auto lg:overflow-y-auto
-      lg:w-[90px]
-      pb-2 lg:pb-0
-    ">
-    <!-- JS ile thumb-img img'ler buraya eklenecek -->
-  </div>
+     <!-- Görsel Alanı -->
+<div class="product-image-wrapper flex flex-col gap-4 w-full items-center">
 
   <!-- Ana Görsel -->
-  <div class="order-1 lg:order-2 flex justify-center w-full">
+  <div class="w-full flex justify-center">
     <img
       id="productImage"
       src=""
@@ -65,6 +52,19 @@
         ring-1 ring-white/10
       "
     />
+  </div>
+
+  <!-- Thumbnail Alanı (ALTTA – DİKEY SCROLL) -->
+  <div
+    id="thumbnailContainer"
+    class="
+      w-full max-w-[650px]
+      flex flex-col gap-3
+      overflow-y-auto
+      max-h-[280px]
+      px-1
+    ">
+    <!-- JS ile thumb-img img'ler eklenecek -->
   </div>
 
 </div>
