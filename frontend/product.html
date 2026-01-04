@@ -18,51 +18,49 @@
   <div class="container mx-auto px-4">
 
     <!-- Ürün Başlık ve Görseller -->
-    <div
-      class="product-content-wrapper grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-4 md:p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl">
+<div
+  class="product-content-wrapper
+         mt-10 md:mt-14 lg:mt-20
+         grid grid-cols-1 lg:grid-cols-[1fr_auto]
+         gap-6 lg:gap-10
+         items-start
+         p-4 md:p-6 lg:p-8
+         bg-white/5 backdrop-blur-xl
+         border border-white/10
+         rounded-2xl shadow-xl">
 
-      <!-- Sol Taraf -->
-      <div class="product-text space-y-4">
-        <h1 id="productTitle" class="text-3xl font-bold text-blue-300"></h1>
-<p id="productDescription" class="text-white"></p>
-
-
-
-      </div>
-
-      <!-- Sağ Taraf -->
-    <div class="product-image-wrapper flex flex-col lg:flex-row gap-6 w-full">
-
-  <!-- SOL: Büyük Görsel -->
-  <div class="flex-1 flex justify-center">
+  <!-- SOL: BÜYÜK GÖRSEL -->
+  <div class="w-full flex justify-center">
     <img
       id="productImage"
       src=""
       alt="Ürün Resmi"
-      width="750"
-      height="750"
-      fetchpriority="high"
-      decoding="async"
-      class="w-full max-w-[750px] aspect-square object-cover rounded-2xl
-             shadow-[0_0_25px_rgba(59,130,246,0.45)]
-             ring-1 ring-white/10">
+      class="w-full max-w-[720px]
+             aspect-square
+             object-cover
+             rounded-2xl
+             shadow-[0_0_30px_rgba(59,130,246,0.6)]
+             ring-1 ring-white/10
+             transition-all duration-300">
   </div>
 
-  <!-- SAĞ: Thumbnail Scroll Alanı -->
+  <!-- SAĞ: SCROLL EDİLEBİLEN THUMBNAIL ALANI -->
   <div
     id="thumbnailContainer"
-    class="flex flex-row lg:flex-col gap-3
+    class="w-full lg:w-[120px]
+           flex flex-row lg:flex-col
+           gap-3
            overflow-x-auto lg:overflow-y-auto
-           lg:max-h-[750px]
-           lg:w-[110px]
-           pb-2 lg:pb-0 pr-1
-           scrollbar-thin scrollbar-thumb-blue-500/40 scrollbar-track-transparent">
-    <!-- JS ile doldurulacak -->
+           max-h-[120px] lg:max-h-[520px]
+           pb-2 lg:pb-0
+           scrollbar-thin scrollbar-thumb-blue-400/50 scrollbar-track-transparent">
+
+    <!-- JS ile küçük kare görseller buraya eklenecek -->
+
   </div>
 
 </div>
 
-    </div>
 
     <!-- Özellikler Tablosu -->
     <div
