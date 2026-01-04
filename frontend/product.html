@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ürünlerimiz</title>
   <link rel="stylesheet" href="style/output.css">
-  <link rel="stylesheet" href="style/output.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 </head>
 
@@ -31,19 +31,44 @@
       </div>
 
       <!-- Sağ Taraf -->
-      <div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-center lg:items-start w-full">
+     <!-- Sağ Taraf -->
+<div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-start w-full">
 
-        <!-- Büyük Görsel -->
-        <img id="productImage" src="" alt="Ürün Resmi"
-          class="w-full max-w-[750px] aspect-square object-cover rounded-2xl shadow-[0_0_25px_rgba(59,130,246,0.6)] ring-1 ring-white/10">
+  <!-- Thumbnail Alanı -->
+  <div
+    id="thumbnailContainer"
+    class="
+      order-2 lg:order-1
+      flex flex-row lg:flex-col gap-3
+      overflow-x-auto lg:overflow-y-auto
+      lg:w-[90px]
+      pb-2 lg:pb-0
+    ">
+    <!-- JS ile thumb-img img'ler buraya eklenecek -->
+  </div>
 
-        <!-- Thumbnails -->
-        <div id="thumbnailContainer"
-          class="flex flex-row lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto max-h-[120px] lg:max-h-[500px] pb-2 lg:pb-0 lg:pr-2">
-          <!-- JS ile doldurulacak -->
-        </div>
+  <!-- Ana Görsel -->
+  <div class="order-1 lg:order-2 flex justify-center w-full">
+    <img
+      id="productImage"
+      src=""
+      alt="Ürün Görseli"
+      width="650"
+      height="650"
+      fetchpriority="high"
+      decoding="async"
+      class="
+        w-full max-w-[650px]
+        aspect-square object-cover
+        rounded-2xl
+        shadow-[0_0_25px_rgba(59,130,246,0.5)]
+        ring-1 ring-white/10
+      "
+    />
+  </div>
 
-      </div>
+</div>
+
     </div>
 
     <!-- Özellikler Tablosu -->
