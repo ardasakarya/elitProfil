@@ -31,40 +31,33 @@
       </div>
 
       <!-- Sağ Taraf -->
-     <!-- Görsel Alanı -->
-<div class="product-image-wrapper flex flex-col gap-4 w-full items-center">
+    <div class="product-image-wrapper flex flex-col lg:flex-row gap-6 w-full">
 
-  <!-- Ana Görsel -->
-  <div class="w-full flex justify-center">
+  <!-- SOL: Büyük Görsel -->
+  <div class="flex-1 flex justify-center">
     <img
       id="productImage"
       src=""
-      alt="Ürün Görseli"
-      width="650"
-      height="650"
+      alt="Ürün Resmi"
+      width="750"
+      height="750"
       fetchpriority="high"
       decoding="async"
-      class="
-        w-full max-w-[650px]
-        aspect-square object-cover
-        rounded-2xl
-        shadow-[0_0_25px_rgba(59,130,246,0.5)]
-        ring-1 ring-white/10
-      "
-    />
+      class="w-full max-w-[750px] aspect-square object-cover rounded-2xl
+             shadow-[0_0_25px_rgba(59,130,246,0.45)]
+             ring-1 ring-white/10">
   </div>
 
-  <!-- Thumbnail Alanı (ALTTA – DİKEY SCROLL) -->
+  <!-- SAĞ: Thumbnail Scroll Alanı -->
   <div
     id="thumbnailContainer"
-    class="
-      w-full max-w-[650px]
-      flex flex-col gap-3
-      overflow-y-auto
-      max-h-[280px]
-      px-1
-    ">
-    <!-- JS ile thumb-img img'ler eklenecek -->
+    class="flex flex-row lg:flex-col gap-3
+           overflow-x-auto lg:overflow-y-auto
+           lg:max-h-[750px]
+           lg:w-[110px]
+           pb-2 lg:pb-0 pr-1
+           scrollbar-thin scrollbar-thumb-blue-500/40 scrollbar-track-transparent">
+    <!-- JS ile doldurulacak -->
   </div>
 
 </div>
