@@ -162,7 +162,8 @@ if (productId && productData[productId]) {
     thumbs.forEach(img => {
         const th = document.createElement("img");
         th.src = fixPath(img);
-        th.className = "thumb-img cursor-pointer";
+        th.className = "w-[40px] h-[40px] object-cover rounded cursor-pointer border";
+
 
         th.onclick = () => {
             document.getElementById("productImage").src = fixPath(img);
