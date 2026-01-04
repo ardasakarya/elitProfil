@@ -141,11 +141,28 @@ if (productId && productData[productId]) {
 
     const thumbs = product.gallery;
 
+    // --- Scroll açılma kuralları ---
+    const isDesktop = window.innerWidth > 768;
+
+    if (isDesktop) {
+        if (thumbs.length <= 3) {
+            thumbnailContainer.style.height = "auto";
+            thumbnailContainer.style.overflowY = "hidden";
+        } else {
+            thumbnailContainer.style.height = "300px";
+            thumbnailContainer.style.overflowY = "auto";
+        }
+    } else {
+        thumbnailContainer.style.height = "auto";
+        thumbnailContainer.style.overflowY = "hidden";
+        thumbnailContainer.style.overflowX = "auto";
+    }
+
     // --- Thumbnail oluştur ---
     thumbs.forEach(img => {
         const th = document.createElement("img");
         th.src = fixPath(img);
-        th.className = "w-full aspect-square object-cover rounded-md cursor-pointer ring-1 ring-transparent hover:ring-blue-400 transition-all";
+        th.className = "thumb-img cursor-pointer";
 
         th.onclick = () => {
             document.getElementById("productImage").src = fixPath(img);
