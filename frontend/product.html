@@ -31,24 +31,26 @@
       </div>
 
       <!-- Sağ Taraf -->
-     <div class="product-image-wrapper flex gap-4 items-start">
+    <div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-center lg:items-start w-full">
 
   <!-- ANA GÖRSEL -->
-  <img
-    id="productImage"
-    src=""
-    alt="Ürün Resmi"
-    class="w-[100px] h-[100px] object-cover rounded-lg border shadow"
-  >
+ <img id="productImage"
+     src=""
+     alt="Ürün Resmi"
+     class="w-full max-w-[750px] aspect-square object-cover 
+            rounded-xl shadow-xl">
 
-  <!-- THUMBNAIL LİSTESİ -->
-  <div
-    id="thumbnailContainer"
-    class="flex flex-col gap-[5px] h-[100px] overflow-y-auto pr-1"
-  >
-    <!-- JS ile doldurulacak -->
-  </div>
+        <!-- Thumbnails -->
+        <div id="thumbnailContainer"
+             class="flex flex-row lg:flex-col gap-3 
+                    overflow-x-auto lg:overflow-y-auto 
+                    max-h-[120px] lg:max-h-[500px]
+                    w-full lg:w-auto 
+                    pb-2 lg:pb-0 lg:pr-2">
 
+            <!-- JS ile doldurulacak -->
+
+        </div>
 </div>
 
     </div>

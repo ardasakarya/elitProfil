@@ -66,9 +66,8 @@ const productData = {
     boyali: {
         title: "Boyalı Profil",
         description: "Estetik ve dayanıklı boyalı profiller.",
-        imgSrc: "product_img/boyalı/SALTC0073v 2-2.webp",
+        imgSrc: "product_img/boyalı/SALTC0074.webp",
         gallery: [
-            "product_img/boyalı/SALTC0073v 2-2.webp",
             "product_img/boyalı/SALTC0074.webp",
             "product_img/boyalı/SALTC0073-2.webp",
             "product_img/boyalı/SALTC0073-3.webp",
@@ -118,81 +117,75 @@ const productData = {
 // ------------------------------
 
 const params = new URLSearchParams(window.location.search);
-const productId = params.get("id");
+const productId = params.get('id');
 
-// GitHub Pages için path düzeltme
-function fixPath(path) {
-    return `/elitProfil/frontend/${path}`;
-}
-
-// Ürün kontrolü
 if (productId && productData[productId]) {
 
     const product = productData[productId];
 
-    // Başlık, açıklama, ana görsel
     document.getElementById("productTitle").textContent = product.title;
     document.getElementById("productDescription").textContent = product.description;
-    document.getElementById("productImage").src = fixPath(product.imgSrc);
+    document.getElementById("productImage").src = product.imgSrc;
 
-    // Thumbnail alanı
     const thumbnailContainer = document.getElementById("thumbnailContainer");
     thumbnailContainer.innerHTML = "";
 
     const thumbs = product.gallery;
 
-    // --- Scroll açılma kuralları ---
-    const isDesktop = window.innerWidth > 768;
+    // --- SCROLL AÇILMA KURALI ---
+if (window.innerWidth > 768) {
 
-    if (isDesktop) {
-        if (thumbs.length <= 3) {
-            thumbnailContainer.style.height = "auto";
-            thumbnailContainer.style.overflowY = "hidden";
-        } else {
-            thumbnailContainer.style.height = "300px";
-            thumbnailContainer.style.overflowY = "auto";
-        }
-    } else {
+    if (thumbs.length <= 3) {
+        // Scroll gerekmez
         thumbnailContainer.style.height = "auto";
         thumbnailContainer.style.overflowY = "hidden";
-        thumbnailContainer.style.overflowX = "auto";
+    } else {
+        // Scroll aktif – diğer fotoğraflar aşağıya saklanır
+        thumbnailContainer.style.height = "300px"; 
+        thumbnailContainer.style.overflowY = "auto";
     }
 
-    // --- Thumbnail oluştur ---
+// Mobil için: yatay scroll, dikey scroll kapalı
+} else {
+    thumbnailContainer.style.height = "auto";
+    thumbnailContainer.style.overflowY = "hidden";
+    thumbnailContainer.style.overflowX = "auto";
+}
+
+    // Thumbnail oluştur
     thumbs.forEach(img => {
         const th = document.createElement("img");
-        th.src = fixPath(img);
-        th.className = "w-[40px] h-[40px] object-cover rounded cursor-pointer border";
-
+        th.src = img;
+        th.className = "thumb-img";
 
         th.onclick = () => {
-            document.getElementById("productImage").src = fixPath(img);
+            document.getElementById("productImage").src = img;
         };
 
         thumbnailContainer.appendChild(th);
     });
 
-    // --- Tablo doldurma ---
+
+    // TABLOYU DOLDUR
     const tbody = document.getElementById("standardTableBody");
     tbody.innerHTML = "";
 
     const specs = product.specs;
+    const rowCount = specs[0].value.length;
 
-    // Her spec aynı uzunlukta olmalı
-    const maxRows = specs[0]?.value?.length || 0;
-
-    for (let i = 0; i < maxRows; i++) {
+    for (let i = 0; i < rowCount; i++) {
         const row = document.createElement("tr");
 
         specs.forEach(spec => {
             const cell = document.createElement("td");
-            cell.textContent = spec.value[i] ?? "-";
+            cell.textContent = spec.value[i];
             cell.className = "border px-4 py-2 text-center";
             row.appendChild(cell);
         });
 
         tbody.appendChild(row);
     }
+
 
 } else {
     // Ürün bulunamadı
