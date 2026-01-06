@@ -30,56 +30,64 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- VIEW BUTTON ---
   const viewButtons = document.querySelectorAll('.btn-view');
 
-  viewButtons.forEach(button => {
-    button.addEventListener('click', function () {
+viewButtons.forEach(button => {
+  button.addEventListener('click', function () {
 
-      let certName = "";
-      let issueDate = "";
-      let expiryDate = "";
-      let imgSrc = "";
+    // ---- DATA ATTRIBUTELER (ANA KAYNAK) ----
+    const file = this.getAttribute("data-cert");
+    const titleFromData = this.getAttribute("data-title");
 
-      // CARD STRUCTURE
-      const card = this.closest('.bg-white');
-      if (card) {
-        certName = card.querySelector('h3').textContent;
-        imgSrc = card.querySelector('img').src;
+    let certName = titleFromData || "Certificate Preview";
+    let issueDate = "";
+    let expiryDate = "";
 
-        issueDate = 'January 15, 2023';
-        expiryDate = 'January 14, 2026';
-      }
+    // ---- CARD YAPISI (VARSA) ----
+    const card = this.closest('.bg-white');
+    if (card) {
+      const h3 = card.querySelector('h3');
+      if (h3) certName = h3.textContent.trim();
 
-      // TABLE STRUCTURE
-      const row = this.closest('tr');
-      if (row) {
-        certName = row.querySelector('td:first-child').textContent;
-        issueDate = row.querySelector('td:nth-child(2)').textContent;
-        expiryDate = row.querySelector('td:nth-child(3)').textContent;
-        imgSrc = row.querySelector('img').src;
-      }
+      issueDate = 'January 15, 2023';
+      expiryDate = 'January 14, 2026';
+    }
 
-      // ---------- PDF & IMAGE PREVIEW FIX ----------
-      modalTitle.textContent = certName;
+    // ---- TABLE YAPISI (VARSA) ----
+    const row = this.closest('tr');
+    if (row) {
+      const nameCell = row.querySelector('td:first-child');
+      const issueCell = row.querySelector('td:nth-child(2)');
+      const expiryCell = row.querySelector('td:nth-child(3)');
 
-      const file = this.getAttribute("data-cert");
+      if (nameCell) certName = nameCell.textContent.trim();
+      if (issueCell) issueDate = issueCell.textContent.trim();
+      if (expiryCell) expiryDate = expiryCell.textContent.trim();
+    }
 
-      if (file && file.toLowerCase().endsWith(".pdf")) {
-        modalImage.style.display = "none";
-        modalDetails.innerHTML = `
-        <iframe src="${file}" class="w-full h-[70vh] rounded-lg border"></iframe>
+    // ---- MODAL BAŞLIK ----
+    modalTitle.textContent = certName;
+
+    // ---- PDF & IMAGE ÖNİZLEME ----
+    if (file && file.toLowerCase().endsWith(".pdf")) {
+      modalImage.style.display = "none";
+      modalDetails.innerHTML = `
+        <iframe 
+          src="${file}" 
+          class="w-full h-[70vh] rounded-lg border">
+        </iframe>
       `;
-      } else {
-        modalImage.style.display = "block";
-        modalImage.src = imgSrc;
-        modalDetails.innerHTML = "";
-      }
-      // ----------------------------------------------
+    } else {
+      modalDetails.innerHTML = "";
+      modalImage.style.display = "block";
+      modalImage.src = file;
+      modalImage.alt = certName;
+    }
 
-      // OPEN MODAL
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    });
+    // ---- MODAL AÇ ----
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
   });
+});
 
 
 
