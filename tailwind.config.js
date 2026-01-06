@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         primary: "#3b82f6",
         secondary: "#10b981",
+        
       },
       borderRadius: {
         none: "0px",
