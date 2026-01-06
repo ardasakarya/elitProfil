@@ -88,8 +88,8 @@
 
  <section class="bg-opacity-5 py-20">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">İşinizi Dönüştürmeye Hazır mısınız?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                <h2 class="text-3xl font-bold text-white mb-4">İşinizi Dönüştürmeye Hazır mısınız?</h2>
+                <p class="text-gray-200 max-w-2xl mx-auto mb-8">
                     Numune talep ederek ürünlerimizin işinize sağlayacağı katkıyı yakından keşfedin.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -104,47 +104,48 @@
 
 
 <div id="sampleModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden px-4">
-  <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl p-4 sm:p-6 md:p-8 relative max-h-[90vh] overflow-y-auto">
+  <div class="bg-gradient-to-br from-[#0f172a] via-[#020617] to-black
+ rounded-xl shadow-2xl w-full max-w-4xl p-4 sm:p-6 md:p-8 relative max-h-[90vh] overflow-y-auto">
     <button onclick="document.getElementById('sampleModal').classList.add('hidden')"
-      class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+      class="absolute top-4 right-4 text-white hover:text-white text-2xl">&times;</button>
     
-    <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Numune Talep Formu</h3>
+    <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Numune Talep Formu</h3>
     
     <form class="space-y-6">
       <!-- Kişisel Bilgiler -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">İsim</label>
+          <label class="block text-sm font-medium text-white mb-1">İsim</label>
           <input type="text" placeholder="İsim"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Soyisim</label>
+          <label class="block text-sm font-medium text-white mb-1">Soyisim</label>
           <input type="text" placeholder="Soyisim"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">E-posta</label>
+          <label class="block text-sm font-medium text-white mb-1">E-posta</label>
           <input type="email" placeholder="ornek@firma.com"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+          <label class="block text-sm font-medium text-white mb-1">Telefon</label>
           <input type="tel" placeholder="+90 5xx xxx xx xx"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Şirket Adı</label>
+          <label class="block text-sm font-medium text-white mb-1">Şirket Adı</label>
           <input type="text" placeholder="Firma adı"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Pozisyon</label>
+          <label class="block text-sm font-medium text-white mb-1">Pozisyon</label>
           <input type="text" placeholder="Göreviniz / Pozisyon"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
         </div>
         <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700 mb-1">Adres</label>
+          <label class="block text-sm font-medium text-white mb-1">Adres</label>
           <textarea rows="3" placeholder="Adres bilgisi"
             class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2"></textarea>
         </div>
@@ -154,27 +155,27 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Standart -->
         <div>
-          <h4 class="font-semibold text-gray-800 mb-3">Standart</h4>
+          <h4 class="font-semibold text-white mb-3">Standart</h4>
           <div class="grid grid-cols-2 gap-2">
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
           </div>
         </div>
 
         <!-- Butilli -->
         <div>
-          <h4 class="font-semibold text-gray-800 mb-3">Butilli</h4>
+          <h4 class="font-semibold text-white mb-3">Butilli</h4>
           <div class="grid grid-cols-2 gap-2">
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
-            <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
+            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
           </div>
         </div>
       </div>
