@@ -156,6 +156,7 @@ if (window.innerWidth > 768) {
     thumbs.forEach(img => {
         const th = document.createElement("img");
         th.src = img;
+        th.alt = "Thumbnail";
         th.className = "thumb-img";
 
         th.onclick = () => {

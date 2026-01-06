@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ürünlerimiz</title>
   <link rel="stylesheet" href="style/output.css">
- <link rel="stylesheet" href="style/product.css">
+  <link rel="stylesheet" href="style/product.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 </head>
+
 <body class="bg-gradient-to-br from-[#000000] via-[#0a1a33] to-[#001128]">
-    <!-- Header -->
+  <!-- Header -->
   <div id="header-container" class="mb-8"></div>
 
   <div class="container mx-auto px-4">
     <!-- Ürün Başlık, Açıklama ve Görsel Alanı -->
-<div class="product-content-wrapper 
+    <div class="product-content-wrapper 
             grid grid-cols-1 lg:grid-cols-2 gap-8 items-start 
             p-4 md:p-6
             bg-gradient-to-br from-white/10 via-white/5 to-white/10
@@ -26,172 +27,181 @@
             text-white">
 
 
-    <!-- Sol Taraf: Yazılar -->
-    <div class="product-text space-y-4">
+      <!-- Sol Taraf: Yazılar -->
+      <div class="product-text space-y-4">
         <h1 id="productTitle" class="text-3xl font-bold"></h1>
         <p id="productDescription" class="text-gray-600"></p>
-    </div>
+      </div>
 
-    <!-- Sağ Taraf: Fotoğraflar -->
-    <div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-center lg:items-start w-full">
+      <!-- Sağ Taraf: Fotoğraflar -->
+      <div class="product-image-wrapper flex flex-col lg:flex-row gap-4 items-center lg:items-start w-full">
 
         <!-- Büyük Fotoğraf -->
-        <img id="productImage"
-             src=""
-             alt="Ürün Resmi"
-             class="w-full max-w-full lg:w-[500px] aspect-square object-cover 
+        <img id="productImage" src="" alt="Ürün Resmi" class="w-full max-w-full lg:w-[500px] aspect-square object-cover 
                     rounded-xl shadow-lg">
 
         <!-- Thumbnails -->
-        <div id="thumbnailContainer"
-             class="flex flex-row lg:flex-col gap-3 
+        <div id="thumbnailContainer" class="flex flex-row lg:flex-col gap-3 
                     overflow-x-auto lg:overflow-y-auto 
                     max-h-[120px] lg:max-h-[500px]
                     w-72 lg:w-auto 
                     pb-2 lg:pb-0 lg:pr-2">
 
-            <!-- JS ile doldurulacak -->
+          <!-- JS ile doldurulacak -->
 
         </div>
 
+      </div>
     </div>
-</div>
 
 
 
 
 
     <!-- Özellikler Tablosu -->
-     <div class="table-wrapper">
-    <table id="standardTable" class="min-w-full mt-6 border-collapse">
-      <thead>
-        <tr>
-          <th rowspan="2" class="border px-4 py-2">Ürün</th>
-          <th rowspan="2" class="border px-4 py-2">Kalınlık</th>
-          <th colspan="4" class="border px-4 py-2">Toplam Metraj / Kutu</th>
-          <th rowspan="2" class="border px-4 py-2">Toplam Profil / Kutu</th>
-        </tr>
-        <tr>
-          <th class="border px-4 py-2">3 metre</th>
-          <th class="border px-4 py-2">5 metre</th>
-          <th class="border px-4 py-2">5,7 metre</th>
-          <th class="border px-4 py-2">6 metre</th>
-        </tr>
-      </thead>
-      <tbody id="standardTableBody">
-        <!-- JavaScript ile doldurulacak -->
-      </tbody>
-    </table>
-    
+    <div class="table-wrapper">
+      <table id="standardTable" class="min-w-full mt-6 border-collapse">
+        <thead>
+          <tr>
+            <th rowspan="2" class="border px-4 py-2">Ürün</th>
+            <th rowspan="2" class="border px-4 py-2">Kalınlık</th>
+            <th colspan="4" class="border px-4 py-2">Toplam Metraj / Kutu</th>
+            <th rowspan="2" class="border px-4 py-2">Toplam Profil / Kutu</th>
+          </tr>
+          <tr>
+            <th class="border px-4 py-2">3 metre</th>
+            <th class="border px-4 py-2">5 metre</th>
+            <th class="border px-4 py-2">5,7 metre</th>
+            <th class="border px-4 py-2">6 metre</th>
+          </tr>
+        </thead>
+        <tbody id="standardTableBody">
+          <!-- JavaScript ile doldurulacak -->
+        </tbody>
+      </table>
+
+    </div>
   </div>
-</div>
 
- <section class="bg-opacity-5 py-20">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl font-bold text-white mb-4">İşinizi Dönüştürmeye Hazır mısınız?</h2>
-                <p class="text-gray-200 max-w-2xl mx-auto mb-8">
-                    Numune talep ederek ürünlerimizin işinize sağlayacağı katkıyı yakından keşfedin.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="document.getElementById('sampleModal').classList.remove('hidden')"
-                        class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
-                        Numune Talep Et
-                    </button>
-                    
-                </div>
-            </div>
-        </section>
+  <section class="bg-opacity-5 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">İşinizi Dönüştürmeye Hazır mısınız?</h2>
+      <p class="text-gray-200 max-w-2xl mx-auto mb-8">
+        Numune talep ederek ürünlerimizin işinize sağlayacağı katkıyı yakından keşfedin.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button onclick="document.getElementById('sampleModal').classList.remove('hidden')"
+          class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
+          Numune Talep Et
+        </button>
+
+      </div>
+    </div>
+  </section>
 
 
-<div id="sampleModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden px-4">
-  <div class="bg-gradient-to-br from-[#0f172a] via-[#020617] to-black
+  <div id="sampleModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden px-4">
+    <div class="bg-gradient-to-br from-[#0f172a] via-[#020617] to-black
  rounded-xl shadow-2xl w-full max-w-4xl p-4 sm:p-6 md:p-8 relative max-h-[90vh] overflow-y-auto">
-    <button onclick="document.getElementById('sampleModal').classList.add('hidden')"
-      class="absolute top-4 right-4 text-white hover:text-white text-2xl">&times;</button>
-    
-    <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Numune Talep Formu</h3>
-    
-    <form class="space-y-6">
-      <!-- Kişisel Bilgiler -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">İsim</label>
-          <input type="text" placeholder="İsim"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">Soyisim</label>
-          <input type="text" placeholder="Soyisim"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">E-posta</label>
-          <input type="email" placeholder="ornek@firma.com"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">Telefon</label>
-          <input type="tel" placeholder="+90 5xx xxx xx xx"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">Şirket Adı</label>
-          <input type="text" placeholder="Firma adı"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-white mb-1">Pozisyon</label>
-          <input type="text" placeholder="Göreviniz / Pozisyon"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-white mb-1">Adres</label>
-          <textarea rows="3" placeholder="Adres bilgisi"
-            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2"></textarea>
-        </div>
-      </div>
+      <button onclick="document.getElementById('sampleModal').classList.add('hidden')"
+        class="absolute top-4 right-4 text-white hover:text-white text-2xl">&times;</button>
 
-      <!-- Ürün Tipi Seçimi -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Standart -->
-        <div>
-          <h4 class="font-semibold text-white mb-3">Standart</h4>
-          <div class="grid grid-cols-2 gap-2">
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
+      <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Numune Talep Formu</h3>
+
+      <form class="space-y-6">
+        <!-- Kişisel Bilgiler -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">İsim</label>
+            <input type="text" placeholder="İsim"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">Soyisim</label>
+            <input type="text" placeholder="Soyisim"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">E-posta</label>
+            <input type="email" placeholder="ornek@firma.com"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">Telefon</label>
+            <input type="tel" placeholder="+90 5xx xxx xx xx"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">Şirket Adı</label>
+            <input type="text" placeholder="Firma adı"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-white mb-1">Pozisyon</label>
+            <input type="text" placeholder="Göreviniz / Pozisyon"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2">
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-white mb-1">Adres</label>
+            <textarea rows="3" placeholder="Adres bilgisi"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-primary focus:ring-2"></textarea>
           </div>
         </div>
 
-        <!-- Butilli -->
-        <div>
-          <h4 class="font-semibold text-white mb-3">Butilli</h4>
-          <div class="grid grid-cols-2 gap-2">
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5 mm</label>
-            <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5 mm</label>
+        <!-- Ürün Tipi Seçimi -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Standart -->
+          <div>
+            <h4 class="font-semibold text-white mb-3">Standart</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5
+                mm</label>
+            </div>
+          </div>
+
+          <!-- Butilli -->
+          <div>
+            <h4 class="font-semibold text-white mb-3">Butilli</h4>
+            <div class="grid grid-cols-2 gap-2">
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 8,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 10,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 11,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 13,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 14,5
+                mm</label>
+              <label class="flex items-center gap-2 text-white"><input type="checkbox" class="accent-primary"> 15,5
+                mm</label>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Gönder Butonu -->
-      <div class="text-right">
-        <button type="submit"
-          class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors">Gönder</button>
-      </div>
-    </form>
+        <!-- Gönder Butonu -->
+        <div class="text-right">
+          <button type="submit"
+            class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors">Gönder</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
 
-  
+
   <div id="footer"></div>
   <script src="script/product.js"></script>
 </body>
+
 </html>
